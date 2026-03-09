@@ -1,0 +1,15 @@
+plugins {
+    id 'maven-publish'
+}
+
+publishing {
+    publications {
+        release(MavenPublication) {
+            groupId = "com.investwell"
+            artifactId = "mint-sdk"
+            version = "2.1.7"
+
+            artifact("libs/mint-2.1.7.aar")
+        }
+    }
+}
