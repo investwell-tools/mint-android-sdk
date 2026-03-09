@@ -1,7 +1,16 @@
 dependencyResolutionManagement {
     repositories {
+
         google()
         mavenCentral()
-        maven { url "https://jitpack.io" }
+
+        maven {
+            url = uri("https://maven.pkg.github.com/investwell-tools/mint-android-sdk")
+
+            credentials {
+                username = providers.gradleProperty("gpr.user").orNull
+                password = providers.gradleProperty("gpr.key").orNull
+            }
+        }
     }
 }

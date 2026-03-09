@@ -3,13 +3,27 @@ plugins {
 }
 
 publishing {
+
     publications {
+
         release(MavenPublication) {
-            groupId = "com.investwell"
+            groupId = "com.github.investwell-tools"
             artifactId = "mint-sdk"
             version = "2.1.7"
 
             artifact("libs/mint-2.1.7.aar")
+        }
+    }
+
+    repositories {
+        maven {
+            name = "GitHubPackages"
+            url = uri("https://maven.pkg.github.com/investwell-tools/mint-android-sdk")
+
+            credentials {
+                username = project.findProperty("gpr.user") ?: System.getenv("GITHUB_USER")
+                password = project.findProperty("gpr.key") ?: System.getenv("GITHUB_TOKEN")
+            }
         }
     }
 }
