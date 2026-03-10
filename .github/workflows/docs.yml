@@ -3,64 +3,49 @@ name: Build Documentation
 on:
   push:
     branches:
-      - master
+      - laxmi/aar2-1-7
 
 jobs:
   docs:
     runs-on: ubuntu-latest
 
     steps:
+
       - name: Checkout Repository
         uses: actions/checkout@v3
 
-      # Install Java
       - name: Setup Java
         uses: actions/setup-java@v3
         with:
           distribution: temurin
           java-version: 17
 
-      # Debug Java path
-      - name: Verify Java
+      # Remove problematic property
+      - name: Fix gradle.properties
         run: |
-          java -version
-          echo "JAVA_HOME=$JAVA_HOME"
+          sed -i '/org.gradle.java.home/d' gradle.properties
 
-      # Install Gradle
-      - name: Install Gradle
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y gradle
+      # Setup modern Gradle
+      - name: Setup Gradle
+        uses: gradle/gradle-build-action@v2
 
-      # Remove problematic Gradle property if present
-      - name: Fix Gradle Java Home
-        run: |
-          if [ -f gradle.properties ]; then
-            sed -i '/org.gradle.java.home/d' gradle.properties
-          fi
-
-      # Generate Dokka documentation
       - name: Generate Dokka API Docs
         run: gradle dokkaHtml
 
-      # Copy API docs into MkDocs folder
       - name: Copy API Docs
         run: |
           mkdir -p docs/api
           cp -r build/dokka/html/* docs/api/
 
-      # Setup Python
       - name: Setup Python
         uses: actions/setup-python@v4
         with:
           python-version: 3.x
 
-      # Install MkDocs
       - name: Install MkDocs
         run: |
           pip install mkdocs
           pip install mkdocs-material
 
-      # Deploy documentation site
       - name: Deploy Documentation
         run: mkdocs gh-deploy --force
