@@ -1,0 +1,8 @@
+{
+  "name": "mint-android-sdk",
+  "lockfileVersion": 11,
+  "requires": true,
+  "deploy": 1,
+  "master": true,
+  "packages": {}
+}
