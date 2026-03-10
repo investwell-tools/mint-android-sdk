@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>ActivityBuilder</title>
+    <link href="../../../../images/logo-icon.svg" rel="icon" type="image/svg">
+    <script>var pathToRoot = "../../../../";</script>
+    <script>document.documentElement.classList.replace("no-js","js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async="async"></script>
+<script type="text/javascript" src="../../../../scripts/sourceset_dependencies.js" async="async"></script>
+<link href="../../../../styles/style.css" rel="Stylesheet">
+<link href="../../../../styles/main.css" rel="Stylesheet">
+<link href="../../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../../styles/font-jb-sans-auto.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../../scripts/clipboard.js" async="async"></script>
+<script type="text/javascript" src="../../../../scripts/navigation-loader.js" async="async"></script>
+<script type="text/javascript" src="../../../../scripts/platform-content-handler.js" async="async"></script>
+<script type="text/javascript" src="../../../../scripts/main.js" defer="defer"></script>
+<script type="text/javascript" src="../../../../scripts/prism.js" async="async"></script>
+<script type="text/javascript" src="../../../../scripts/symbol-parameters-wrapper_deferred.js" defer="defer"></script>
+</head>
+<body>
+    <div class="root">
+<nav class="navigation" id="navigation-wrapper">
+    <div class="navigation--inner">
+        <div class="navigation-title">
+            <button class="menu-toggle" id="menu-toggle" type="button">toggle menu</button>
+            <div class="library-name">
+                    <a class="library-name--link" href="../../../../index.html">
+                            Mint Android SDK
+                    </a>
+            </div>
+            <div class="library-version">
+            </div>
+        </div>
+        <div class="filter-section" id="filter-section">
+                <button class="platform-tag platform-selector jvm-like" data-active="" data-filter=":mint:dokkaHtml/release">androidJvm</button>
+        </div>
+    </div>
+    <div class="navigation-controls">
+        <button class="navigation-controls--btn navigation-controls--theme" id="theme-toggle-button" type="button">switch theme</button>
+        <div class="navigation-controls--btn navigation-controls--search" id="searchBar" role="button">search in API</div>
+    </div>
+</nav>
+        <div id="container">
+            <div class="sidebar" id="leftColumn">
+                <div class="sidebar--inner" id="sideMenu"></div>
+            </div>
+            <div id="main">
+<div class="main-content" data-page-type="classlike" id="content" pageIds="Mint Android SDK::investwell.utils.crop/CropImage.ActivityBuilder///PointingToDeclaration//-34834412">
+  <div class="breadcrumbs"><a href="../../../../index.html">Mint Android SDK</a><span class="delimiter">/</span><a href="../../index.html">investwell.utils.crop</a><span class="delimiter">/</span><a href="../index.html">CropImage</a><span class="delimiter">/</span><span class="current">ActivityBuilder</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span>Activity</span><wbr></wbr><span><span>Builder</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":mint:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">class </span><a href="index.html">ActivityBuilder</a></div><p class="paragraph">Builder used for creating Image Crop Activity by user request.</p></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="FUNCTION">
+        <h2 class="">Functions</h2>
+        <div class="table"><a data-name="146654178%2FFunctions%2F-34834412" anchor-label="getIntent" id="146654178%2FFunctions%2F-34834412" data-filterable-set=":mint:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":mint:dokkaHtml/release" data-filterable-set=":mint:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-intent.html"><span>get</span><wbr></wbr><span><span>Intent</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="146654178%2FFunctions%2F-34834412"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":mint:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="get-intent.html"><span class="token function">getIntent</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span><span class="token annotation builtin">@</span><a href="https://developer.android.com/reference/kotlin/androidx/annotation/NonNull.html"><span class="token annotation builtin">NonNull</span></a> </span>context<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/content/Context.html">Context</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/content/Intent.html">Intent</a></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="get-intent.html"><span class="token function">getIntent</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span><span class="token annotation builtin">@</span><a href="https://developer.android.com/reference/kotlin/androidx/annotation/NonNull.html"><span class="token annotation builtin">NonNull</span></a> </span>context<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/content/Context.html">Context</a><span class="token punctuation">, </span></span><span class="parameter "><span><span class="token annotation builtin">@</span><a href="https://developer.android.com/reference/kotlin/androidx/annotation/Nullable.html"><span class="token annotation builtin">Nullable</span></a> </span>cls<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/java/lang/Class.html">Class</a><span class="token operator">&lt;</span><span class="token keyword">out </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-any/index.html">Any</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/content/Intent.html">Intent</a></div><div class="brief ">Get <a href="../../-crop-image-activity/index.html">CropImageActivity</a> intent to start the activity.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-436885555%2FFunctions%2F-34834412" anchor-label="setActivityMenuIconColor" id="-436885555%2FFunctions%2F-34834412" data-filterable-set=":mint:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":mint:dokkaHtml/release" data-filterable-set=":mint:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-activity-menu-icon-color.html"><span>set</span><wbr></wbr><span>Activity</span><wbr></wbr><span>Menu</span><wbr></wbr><span>Icon</span><wbr></wbr><span><span>Color</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-436885555%2FFunctions%2F-34834412"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":mint:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="set-activity-menu-icon-color.html"><span class="token function">setActivityMenuIconColor</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">activityMenuIconColor<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">CropImage.ActivityBuilder</a></div><div class="brief ">the color to use for action bar items icons.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="103240334%2FFunctions%2F-34834412" anchor-label="setActivityTitle" id="103240334%2FFunctions%2F-34834412" data-filterable-set=":mint:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":mint:dokkaHtml/release" data-filterable-set=":mint:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-activity-title.html"><span>set</span><wbr></wbr><span>Activity</span><wbr></wbr><span><span>Title</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="103240334%2FFunctions%2F-34834412"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":mint:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="set-activity-title.html"><span class="token function">setActivityTitle</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">activityTitle<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/java/lang/CharSequence.html">CharSequence</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">CropImage.ActivityBuilder</a></div><div class="brief ">the title of the <a href="../../-crop-image-activity/index.html">CropImageActivity</a>.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1019001293%2FFunctions%2F-34834412" anchor-label="setAllowCounterRotation" id="-1019001293%2FFunctions%2F-34834412" data-filterable-set=":mint:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":mint:dokkaHtml/release" data-filterable-set=":mint:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-allow-counter-rotation.html"><span>set</span><wbr></wbr><span>Allow</span><wbr></wbr><span>Counter</span><wbr></wbr><span><span>Rotation</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1019001293%2FFunctions%2F-34834412"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":mint:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="set-allow-counter-rotation.html"><span class="token function">setAllowCounterRotation</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">allowCounterRotation<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">CropImage.ActivityBuilder</a></div><div class="brief ">if to allow counter-clockwise rotation during cropping.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-2098800192%2FFunctions%2F-34834412" anchor-label="setAllowFlipping" id="-2098800192%2FFunctions%2F-34834412" data-filterable-set=":mint:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":mint:dokkaHtml/release" data-filterable-set=":mint:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-allow-flipping.html"><span>set</span><wbr></wbr><span>Allow</span><wbr></wbr><span><span>Flipping</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2098800192%2FFunctions%2F-34834412"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":mint:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="set-allow-flipping.html"><span class="token function">setAllowFlipping</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">allowFlipping<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">CropImage.ActivityBuilder</a></div><div class="brief ">if to allow flipping during cropping.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="2047551967%2FFunctions%2F-34834412" anchor-label="setAllowRotation" id="2047551967%2FFunctions%2F-34834412" data-filterable-set=":mint:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":mint:dokkaHtml/release" data-filterable-set=":mint:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-allow-rotation.html"><span>set</span><wbr></wbr><span>Allow</span><wbr></wbr><span><span>Rotation</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2047551967%2FFunctions%2F-34834412"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":mint:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="set-allow-rotation.html"><span class="token function">setAllowRotation</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">allowRotation<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">CropImage.ActivityBuilder</a></div><div class="brief ">if to allow rotation during cropping.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1937771192%2FFunctions%2F-34834412" anchor-label="setAspectRatio" id="1937771192%2FFunctions%2F-34834412" data-filterable-set=":mint:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":mint:dokkaHtml/release" data-filterable-set=":mint:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-aspect-ratio.html"><span>set</span><wbr></wbr><span>Aspect</span><wbr></wbr><span><span>Ratio</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1937771192%2FFunctions%2F-34834412"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":mint:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="set-aspect-ratio.html"><span class="token function">setAspectRatio</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">aspectRatioX<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter ">aspectRatioY<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">CropImage.ActivityBuilder</a></div><div class="brief ">the X,Y value of the aspect ratio.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1426932745%2FFunctions%2F-34834412" anchor-label="setAutoZoomEnabled" id="-1426932745%2FFunctions%2F-34834412" data-filterable-set=":mint:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":mint:dokkaHtml/release" data-filterable-set=":mint:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-auto-zoom-enabled.html"><span>set</span><wbr></wbr><span>Auto</span><wbr></wbr><span>Zoom</span><wbr></wbr><span><span>Enabled</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1426932745%2FFunctions%2F-34834412"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":mint:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="set-auto-zoom-enabled.html"><span class="token function">setAutoZoomEnabled</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">autoZoomEnabled<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">CropImage.ActivityBuilder</a></div><div class="brief ">if auto-zoom functionality is enabled.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-232440218%2FFunctions%2F-34834412" anchor-label="setBackgroundColor" id="-232440218%2FFunctions%2F-34834412" data-filterable-set=":mint:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":mint:dokkaHtml/release" data-filterable-set=":mint:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-background-color.html"><span>set</span><wbr></wbr><span>Background</span><wbr></wbr><span><span>Color</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-232440218%2FFunctions%2F-34834412"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":mint:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="set-background-color.html"><span class="token function">setBackgroundColor</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">backgroundColor<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">CropImage.ActivityBuilder</a></div><div class="brief ">the color of the overlay background around the crop window cover the image parts not in the crop window.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="660986259%2FFunctions%2F-34834412" anchor-label="setBorderCornerColor" id="660986259%2FFunctions%2F-34834412" data-filterable-set=":mint:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":mint:dokkaHtml/release" data-filterable-set=":mint:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-border-corner-color.html"><span>set</span><wbr></wbr><span>Border</span><wbr></wbr><span>Corner</span><wbr></wbr><span><span>Color</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="660986259%2FFunctions%2F-34834412"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":mint:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="set-border-corner-color.html"><span class="token function">setBorderCornerColor</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">borderCornerColor<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">CropImage.ActivityBuilder</a></div><div class="brief ">the color of the corner line.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1246203797%2FFunctions%2F-34834412" anchor-label="setBorderCornerLength" id="1246203797%2FFunctions%2F-34834412" data-filterable-set=":mint:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":mint:dokkaHtml/release" data-filterable-set=":mint:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-border-corner-length.html"><span>set</span><wbr></wbr><span>Border</span><wbr></wbr><span>Corner</span><wbr></wbr><span><span>Length</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1246203797%2FFunctions%2F-34834412"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":mint:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="set-border-corner-length.html"><span class="token function">setBorderCornerLength</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">borderCornerLength<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-float/index.html">Float</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">CropImage.ActivityBuilder</a></div><div class="brief ">the length of the corner line away from the corner (in pixels).</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="185748610%2FFunctions%2F-34834412" anchor-label="setBorderCornerOffset" id="185748610%2FFunctions%2F-34834412" data-filterable-set=":mint:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":mint:dokkaHtml/release" data-filterable-set=":mint:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-border-corner-offset.html"><span>set</span><wbr></wbr><span>Border</span><wbr></wbr><span>Corner</span><wbr></wbr><span><span>Offset</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="185748610%2FFunctions%2F-34834412"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":mint:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="set-border-corner-offset.html"><span class="token function">setBorderCornerOffset</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">borderCornerOffset<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-float/index.html">Float</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">CropImage.ActivityBuilder</a></div><div class="brief ">the offset of corner line from crop window border (in pixels).</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1926171543%2FFunctions%2F-34834412" anchor-label="setBorderCornerThickness" id="1926171543%2FFunctions%2F-34834412" data-filterable-set=":mint:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":mint:dokkaHtml/release" data-filterable-set=":mint:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-border-corner-thickness.html"><span>set</span><wbr></wbr><span>Border</span><wbr></wbr><span>Corner</span><wbr></wbr><span><span>Thickness</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1926171543%2FFunctions%2F-34834412"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":mint:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="set-border-corner-thickness.html"><span class="token function">setBorderCornerThickness</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">borderCornerThickness<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-float/index.html">Float</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">CropImage.ActivityBuilder</a></div><div class="brief ">thickness of the corner line (in pixels).</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1116447852%2FFunctions%2F-34834412" anchor-label="setBorderLineColor" id="-1116447852%2FFunctions%2F-34834412" data-filterable-set=":mint:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":mint:dokkaHtml/release" data-filterable-set=":mint:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-border-line-color.html"><span>set</span><wbr></wbr><span>Border</span><wbr></wbr><span>Line</span><wbr></wbr><span><span>Color</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1116447852%2FFunctions%2F-34834412"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":mint:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="set-border-line-color.html"><span class="token function">setBorderLineColor</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">borderLineColor<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">CropImage.ActivityBuilder</a></div><div class="brief ">the color of the guidelines lines.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-447067944%2FFunctions%2F-34834412" anchor-label="setBorderLineThickness" id="-447067944%2FFunctions%2F-34834412" data-filterable-set=":mint:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":mint:dokkaHtml/release" data-filterable-set=":mint:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-border-line-thickness.html"><span>set</span><wbr></wbr><span>Border</span><wbr></wbr><span>Line</span><wbr></wbr><span><span>Thickness</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-447067944%2FFunctions%2F-34834412"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":mint:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="set-border-line-thickness.html"><span class="token function">setBorderLineThickness</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">borderLineThickness<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-float/index.html">Float</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">CropImage.ActivityBuilder</a></div><div class="brief ">the thickness of the guidelines lines (in pixels).</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1471539419%2FFunctions%2F-34834412" anchor-label="setCropMenuCropButtonIcon" id="-1471539419%2FFunctions%2F-34834412" data-filterable-set=":mint:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":mint:dokkaHtml/release" data-filterable-set=":mint:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-crop-menu-crop-button-icon.html"><span>set</span><wbr></wbr><span>Crop</span><wbr></wbr><span>Menu</span><wbr></wbr><span>Crop</span><wbr></wbr><span>Button</span><wbr></wbr><span><span>Icon</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1471539419%2FFunctions%2F-34834412"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":mint:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="set-crop-menu-crop-button-icon.html"><span class="token function">setCropMenuCropButtonIcon</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span><span class="token annotation builtin">@</span><a href="https://developer.android.com/reference/kotlin/androidx/annotation/DrawableRes.html"><span class="token annotation builtin">DrawableRes</span></a> </span>drawableResource<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">CropImage.ActivityBuilder</a></div><div class="brief ">Image resource id to use for crop icon instead of text.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="630397840%2FFunctions%2F-34834412" anchor-label="setCropMenuCropButtonTitle" id="630397840%2FFunctions%2F-34834412" data-filterable-set=":mint:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":mint:dokkaHtml/release" data-filterable-set=":mint:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-crop-menu-crop-button-title.html"><span>set</span><wbr></wbr><span>Crop</span><wbr></wbr><span>Menu</span><wbr></wbr><span>Crop</span><wbr></wbr><span>Button</span><wbr></wbr><span><span>Title</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="630397840%2FFunctions%2F-34834412"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":mint:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="set-crop-menu-crop-button-title.html"><span class="token function">setCropMenuCropButtonTitle</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">title<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/java/lang/CharSequence.html">CharSequence</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">CropImage.ActivityBuilder</a></div><div class="brief ">optional, set crop menu crop button title.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="401434228%2FFunctions%2F-34834412" anchor-label="setCropShape" id="401434228%2FFunctions%2F-34834412" data-filterable-set=":mint:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":mint:dokkaHtml/release" data-filterable-set=":mint:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-crop-shape.html"><span>set</span><wbr></wbr><span>Crop</span><wbr></wbr><span><span>Shape</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="401434228%2FFunctions%2F-34834412"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":mint:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="set-crop-shape.html"><span class="token function">setCropShape</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span><span class="token annotation builtin">@</span><a href="https://developer.android.com/reference/kotlin/androidx/annotation/NonNull.html"><span class="token annotation builtin">NonNull</span></a> </span>cropShape<span class="token operator">: </span><a href="../../-crop-image-view/-crop-shape/index.html">CropImageView.CropShape</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">CropImage.ActivityBuilder</a></div><div class="brief ">The shape of the cropping window.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-786306528%2FFunctions%2F-34834412" anchor-label="setFixAspectRatio" id="-786306528%2FFunctions%2F-34834412" data-filterable-set=":mint:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":mint:dokkaHtml/release" data-filterable-set=":mint:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-fix-aspect-ratio.html"><span>set</span><wbr></wbr><span>Fix</span><wbr></wbr><span>Aspect</span><wbr></wbr><span><span>Ratio</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-786306528%2FFunctions%2F-34834412"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":mint:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="set-fix-aspect-ratio.html"><span class="token function">setFixAspectRatio</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">fixAspectRatio<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">CropImage.ActivityBuilder</a></div><div class="brief ">whether the width to height aspect ratio should be maintained or free to change.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="788660064%2FFunctions%2F-34834412" anchor-label="setFlipHorizontally" id="788660064%2FFunctions%2F-34834412" data-filterable-set=":mint:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":mint:dokkaHtml/release" data-filterable-set=":mint:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-flip-horizontally.html"><span>set</span><wbr></wbr><span>Flip</span><wbr></wbr><span><span>Horizontally</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="788660064%2FFunctions%2F-34834412"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":mint:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="set-flip-horizontally.html"><span class="token function">setFlipHorizontally</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">flipHorizontally<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">CropImage.ActivityBuilder</a></div><div class="brief ">whether the image should be flipped horizontally.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1157031246%2FFunctions%2F-34834412" anchor-label="setFlipVertically" id="-1157031246%2FFunctions%2F-34834412" data-filterable-set=":mint:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":mint:dokkaHtml/release" data-filterable-set=":mint:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-flip-vertically.html"><span>set</span><wbr></wbr><span>Flip</span><wbr></wbr><span><span>Vertically</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1157031246%2FFunctions%2F-34834412"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":mint:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="set-flip-vertically.html"><span class="token function">setFlipVertically</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">flipVertically<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">CropImage.ActivityBuilder</a></div><div class="brief ">whether the image should be flipped vertically.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-912476354%2FFunctions%2F-34834412" anchor-label="setGuidelines" id="-912476354%2FFunctions%2F-34834412" data-filterable-set=":mint:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":mint:dokkaHtml/release" data-filterable-set=":mint:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-guidelines.html"><span>set</span><wbr></wbr><span><span>Guidelines</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-912476354%2FFunctions%2F-34834412"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":mint:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="set-guidelines.html"><span class="token function">setGuidelines</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span><span class="token annotation builtin">@</span><a href="https://developer.android.com/reference/kotlin/androidx/annotation/NonNull.html"><span class="token annotation builtin">NonNull</span></a> </span>guidelines<span class="token operator">: </span><a href="../../-crop-image-view/-guidelines/index.html">CropImageView.Guidelines</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">CropImage.ActivityBuilder</a></div><div class="brief ">whether the guidelines should be on, off, or only showing when resizing.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1676058801%2FFunctions%2F-34834412" anchor-label="setGuidelinesColor" id="1676058801%2FFunctions%2F-34834412" data-filterable-set=":mint:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":mint:dokkaHtml/release" data-filterable-set=":mint:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-guidelines-color.html"><span>set</span><wbr></wbr><span>Guidelines</span><wbr></wbr><span><span>Color</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1676058801%2FFunctions%2F-34834412"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":mint:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="set-guidelines-color.html"><span class="token function">setGuidelinesColor</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">guidelinesColor<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">CropImage.ActivityBuilder</a></div><div class="brief ">the color of the guidelines lines.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="2052686901%2FFunctions%2F-34834412" anchor-label="setGuidelinesThickness" id="2052686901%2FFunctions%2F-34834412" data-filterable-set=":mint:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":mint:dokkaHtml/release" data-filterable-set=":mint:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-guidelines-thickness.html"><span>set</span><wbr></wbr><span>Guidelines</span><wbr></wbr><span><span>Thickness</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2052686901%2FFunctions%2F-34834412"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":mint:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="set-guidelines-thickness.html"><span class="token function">setGuidelinesThickness</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">guidelinesThickness<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-float/index.html">Float</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">CropImage.ActivityBuilder</a></div><div class="brief ">the thickness of the guidelines lines (in pixels).</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1681525282%2FFunctions%2F-34834412" anchor-label="setInitialCropWindowPaddingRatio" id="1681525282%2FFunctions%2F-34834412" data-filterable-set=":mint:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":mint:dokkaHtml/release" data-filterable-set=":mint:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-initial-crop-window-padding-ratio.html"><span>set</span><wbr></wbr><span>Initial</span><wbr></wbr><span>Crop</span><wbr></wbr><span>Window</span><wbr></wbr><span>Padding</span><wbr></wbr><span><span>Ratio</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1681525282%2FFunctions%2F-34834412"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":mint:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="set-initial-crop-window-padding-ratio.html"><span class="token function">setInitialCropWindowPaddingRatio</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">initialCropWindowPaddingRatio<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-float/index.html">Float</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">CropImage.ActivityBuilder</a></div><div class="brief ">The initial crop window padding from image borders in percentage of the cropping image dimensions.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-125982963%2FFunctions%2F-34834412" anchor-label="setInitialCropWindowRectangle" id="-125982963%2FFunctions%2F-34834412" data-filterable-set=":mint:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":mint:dokkaHtml/release" data-filterable-set=":mint:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-initial-crop-window-rectangle.html"><span>set</span><wbr></wbr><span>Initial</span><wbr></wbr><span>Crop</span><wbr></wbr><span>Window</span><wbr></wbr><span><span>Rectangle</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-125982963%2FFunctions%2F-34834412"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":mint:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="set-initial-crop-window-rectangle.html"><span class="token function">setInitialCropWindowRectangle</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">initialCropWindowRectangle<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/graphics/Rect.html">Rect</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">CropImage.ActivityBuilder</a></div><div class="brief ">the initial rectangle to set on the cropping image after loading.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1411438349%2FFunctions%2F-34834412" anchor-label="setInitialRotation" id="-1411438349%2FFunctions%2F-34834412" data-filterable-set=":mint:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":mint:dokkaHtml/release" data-filterable-set=":mint:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-initial-rotation.html"><span>set</span><wbr></wbr><span>Initial</span><wbr></wbr><span><span>Rotation</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1411438349%2FFunctions%2F-34834412"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":mint:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="set-initial-rotation.html"><span class="token function">setInitialRotation</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">initialRotation<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">CropImage.ActivityBuilder</a></div><div class="brief ">the initial rotation to set on the cropping image after loading (0-360 degrees clockwise).</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1556005161%2FFunctions%2F-34834412" anchor-label="setMaxCropResultSize" id="-1556005161%2FFunctions%2F-34834412" data-filterable-set=":mint:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":mint:dokkaHtml/release" data-filterable-set=":mint:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-max-crop-result-size.html"><span>set</span><wbr></wbr><span>Max</span><wbr></wbr><span>Crop</span><wbr></wbr><span>Result</span><wbr></wbr><span><span>Size</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1556005161%2FFunctions%2F-34834412"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":mint:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="set-max-crop-result-size.html"><span class="token function">setMaxCropResultSize</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">maxCropResultWidth<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter ">maxCropResultHeight<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">CropImage.ActivityBuilder</a></div><div class="brief ">the max size the resulting cropping image is allowed to be, affects the cropping window limits (in pixels).</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-889297176%2FFunctions%2F-34834412" anchor-label="setMaxZoom" id="-889297176%2FFunctions%2F-34834412" data-filterable-set=":mint:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":mint:dokkaHtml/release" data-filterable-set=":mint:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-max-zoom.html"><span>set</span><wbr></wbr><span>Max</span><wbr></wbr><span><span>Zoom</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-889297176%2FFunctions%2F-34834412"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":mint:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="set-max-zoom.html"><span class="token function">setMaxZoom</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">maxZoom<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">CropImage.ActivityBuilder</a></div><div class="brief ">The max zoom allowed during cropping.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-623849659%2FFunctions%2F-34834412" anchor-label="setMinCropResultSize" id="-623849659%2FFunctions%2F-34834412" data-filterable-set=":mint:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":mint:dokkaHtml/release" data-filterable-set=":mint:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-min-crop-result-size.html"><span>set</span><wbr></wbr><span>Min</span><wbr></wbr><span>Crop</span><wbr></wbr><span>Result</span><wbr></wbr><span><span>Size</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-623849659%2FFunctions%2F-34834412"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":mint:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="set-min-crop-result-size.html"><span class="token function">setMinCropResultSize</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">minCropResultWidth<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter ">minCropResultHeight<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">CropImage.ActivityBuilder</a></div><div class="brief ">the min size the resulting cropping image is allowed to be, affects the cropping window limits (in pixels).</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-2070628968%2FFunctions%2F-34834412" anchor-label="setMinCropWindowSize" id="-2070628968%2FFunctions%2F-34834412" data-filterable-set=":mint:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":mint:dokkaHtml/release" data-filterable-set=":mint:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-min-crop-window-size.html"><span>set</span><wbr></wbr><span>Min</span><wbr></wbr><span>Crop</span><wbr></wbr><span>Window</span><wbr></wbr><span><span>Size</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2070628968%2FFunctions%2F-34834412"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":mint:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="set-min-crop-window-size.html"><span class="token function">setMinCropWindowSize</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">minCropWindowWidth<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter ">minCropWindowHeight<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">CropImage.ActivityBuilder</a></div><div class="brief ">the min size the crop window is allowed to be (in pixels).</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1354854061%2FFunctions%2F-34834412" anchor-label="setMultiTouchEnabled" id="-1354854061%2FFunctions%2F-34834412" data-filterable-set=":mint:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":mint:dokkaHtml/release" data-filterable-set=":mint:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-multi-touch-enabled.html"><span>set</span><wbr></wbr><span>Multi</span><wbr></wbr><span>Touch</span><wbr></wbr><span><span>Enabled</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1354854061%2FFunctions%2F-34834412"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":mint:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="set-multi-touch-enabled.html"><span class="token function">setMultiTouchEnabled</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">multiTouchEnabled<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">CropImage.ActivityBuilder</a></div><div class="brief ">if multi touch functionality is enabled.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-2067307439%2FFunctions%2F-34834412" anchor-label="setNoOutputImage" id="-2067307439%2FFunctions%2F-34834412" data-filterable-set=":mint:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":mint:dokkaHtml/release" data-filterable-set=":mint:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-no-output-image.html"><span>set</span><wbr></wbr><span>No</span><wbr></wbr><span>Output</span><wbr></wbr><span><span>Image</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2067307439%2FFunctions%2F-34834412"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":mint:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="set-no-output-image.html"><span class="token function">setNoOutputImage</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">noOutputImage<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">CropImage.ActivityBuilder</a></div><div class="brief ">if the result of crop image activity should not save the cropped image bitmap.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="2000834762%2FFunctions%2F-34834412" anchor-label="setOutputCompressFormat" id="2000834762%2FFunctions%2F-34834412" data-filterable-set=":mint:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":mint:dokkaHtml/release" data-filterable-set=":mint:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-output-compress-format.html"><span>set</span><wbr></wbr><span>Output</span><wbr></wbr><span>Compress</span><wbr></wbr><span><span>Format</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2000834762%2FFunctions%2F-34834412"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":mint:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="set-output-compress-format.html"><span class="token function">setOutputCompressFormat</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">outputCompressFormat<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/graphics/Bitmap.CompressFormat.html">Bitmap.CompressFormat</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">CropImage.ActivityBuilder</a></div><div class="brief ">the compression format to use when writting the image.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="632702669%2FFunctions%2F-34834412" anchor-label="setOutputCompressQuality" id="632702669%2FFunctions%2F-34834412" data-filterable-set=":mint:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":mint:dokkaHtml/release" data-filterable-set=":mint:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-output-compress-quality.html"><span>set</span><wbr></wbr><span>Output</span><wbr></wbr><span>Compress</span><wbr></wbr><span><span>Quality</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="632702669%2FFunctions%2F-34834412"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":mint:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="set-output-compress-quality.html"><span class="token function">setOutputCompressQuality</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">outputCompressQuality<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">CropImage.ActivityBuilder</a></div><div class="brief ">the quility (if applicable) to use when writting the image (0 - 100).</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="836299983%2FFunctions%2F-34834412" anchor-label="setOutputUri" id="836299983%2FFunctions%2F-34834412" data-filterable-set=":mint:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":mint:dokkaHtml/release" data-filterable-set=":mint:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-output-uri.html"><span>set</span><wbr></wbr><span>Output</span><wbr></wbr><span><span>Uri</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="836299983%2FFunctions%2F-34834412"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":mint:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="set-output-uri.html"><span class="token function">setOutputUri</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">outputUri<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/net/Uri.html">Uri</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">CropImage.ActivityBuilder</a></div><div class="brief ">the Android Uri to save the cropped image to.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1763944241%2FFunctions%2F-34834412" anchor-label="setRequestedSize" id="1763944241%2FFunctions%2F-34834412" data-filterable-set=":mint:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":mint:dokkaHtml/release" data-filterable-set=":mint:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-requested-size.html"><span>set</span><wbr></wbr><span>Requested</span><wbr></wbr><span><span>Size</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1763944241%2FFunctions%2F-34834412"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":mint:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="set-requested-size.html"><span class="token function">setRequestedSize</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">reqWidth<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter ">reqHeight<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">CropImage.ActivityBuilder</a></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="set-requested-size.html"><span class="token function">setRequestedSize</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">reqWidth<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter ">reqHeight<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter ">options<span class="token operator">: </span><a href="../../-crop-image-view/-request-size-options/index.html">CropImageView.RequestSizeOptions</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">CropImage.ActivityBuilder</a></div><div class="brief ">the size to resize the cropped image to.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1901214554%2FFunctions%2F-34834412" anchor-label="setRotationDegrees" id="1901214554%2FFunctions%2F-34834412" data-filterable-set=":mint:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":mint:dokkaHtml/release" data-filterable-set=":mint:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-rotation-degrees.html"><span>set</span><wbr></wbr><span>Rotation</span><wbr></wbr><span><span>Degrees</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1901214554%2FFunctions%2F-34834412"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":mint:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="set-rotation-degrees.html"><span class="token function">setRotationDegrees</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">rotationDegrees<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">CropImage.ActivityBuilder</a></div><div class="brief ">The amount of degreees to rotate clockwise or counter-clockwise (0-360).</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1974837972%2FFunctions%2F-34834412" anchor-label="setScaleType" id="1974837972%2FFunctions%2F-34834412" data-filterable-set=":mint:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":mint:dokkaHtml/release" data-filterable-set=":mint:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-scale-type.html"><span>set</span><wbr></wbr><span>Scale</span><wbr></wbr><span><span>Type</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1974837972%2FFunctions%2F-34834412"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":mint:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="set-scale-type.html"><span class="token function">setScaleType</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span><span class="token annotation builtin">@</span><a href="https://developer.android.com/reference/kotlin/androidx/annotation/NonNull.html"><span class="token annotation builtin">NonNull</span></a> </span>scaleType<span class="token operator">: </span><a href="../../-crop-image-view/-scale-type/index.html">CropImageView.ScaleType</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">CropImage.ActivityBuilder</a></div><div class="brief ">The initial scale type of the image in the crop image view<i>Default: FIT_CENTER</i></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-322701925%2FFunctions%2F-34834412" anchor-label="setShowCropOverlay" id="-322701925%2FFunctions%2F-34834412" data-filterable-set=":mint:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":mint:dokkaHtml/release" data-filterable-set=":mint:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-show-crop-overlay.html"><span>set</span><wbr></wbr><span>Show</span><wbr></wbr><span>Crop</span><wbr></wbr><span><span>Overlay</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-322701925%2FFunctions%2F-34834412"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":mint:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="set-show-crop-overlay.html"><span class="token function">setShowCropOverlay</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">showCropOverlay<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">CropImage.ActivityBuilder</a></div><div class="brief ">if to show crop overlay UI what contains the crop window UI surrounded by background over the cropping image.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="73207530%2FFunctions%2F-34834412" anchor-label="setSnapRadius" id="73207530%2FFunctions%2F-34834412" data-filterable-set=":mint:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":mint:dokkaHtml/release" data-filterable-set=":mint:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-snap-radius.html"><span>set</span><wbr></wbr><span>Snap</span><wbr></wbr><span><span>Radius</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="73207530%2FFunctions%2F-34834412"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":mint:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="set-snap-radius.html"><span class="token function">setSnapRadius</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">snapRadius<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-float/index.html">Float</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">CropImage.ActivityBuilder</a></div><div class="brief ">An edge of the crop window will snap to the corresponding edge of a specified bounding box when the crop window edge is less than or equal to this distance (in pixels) away from the bounding box edge (in pixels).</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-66432331%2FFunctions%2F-34834412" anchor-label="setTouchRadius" id="-66432331%2FFunctions%2F-34834412" data-filterable-set=":mint:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":mint:dokkaHtml/release" data-filterable-set=":mint:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-touch-radius.html"><span>set</span><wbr></wbr><span>Touch</span><wbr></wbr><span><span>Radius</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-66432331%2FFunctions%2F-34834412"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":mint:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="set-touch-radius.html"><span class="token function">setTouchRadius</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">touchRadius<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-float/index.html">Float</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">CropImage.ActivityBuilder</a></div><div class="brief ">The radius of the touchable area around the handle (in pixels).</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1880464937%2FFunctions%2F-34834412" anchor-label="start" id="-1880464937%2FFunctions%2F-34834412" data-filterable-set=":mint:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":mint:dokkaHtml/release" data-filterable-set=":mint:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="start.html"><span><span>start</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1880464937%2FFunctions%2F-34834412"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":mint:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="start.html"><span class="token function">start</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span><span class="token annotation builtin">@</span><a href="https://developer.android.com/reference/kotlin/androidx/annotation/NonNull.html"><span class="token annotation builtin">NonNull</span></a> </span>activity<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/app/Activity.html">Activity</a></span></span><span class="token punctuation">)</span></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="start.html"><span class="token function">start</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span><span class="token annotation builtin">@</span><a href="https://developer.android.com/reference/kotlin/androidx/annotation/NonNull.html"><span class="token annotation builtin">NonNull</span></a> </span>activity<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/app/Activity.html">Activity</a><span class="token punctuation">, </span></span><span class="parameter "><span><span class="token annotation builtin">@</span><a href="https://developer.android.com/reference/kotlin/androidx/annotation/Nullable.html"><span class="token annotation builtin">Nullable</span></a> </span>cls<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/java/lang/Class.html">Class</a><span class="token operator">&lt;</span><span class="token keyword">out </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-any/index.html">Any</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span></div><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://developer.android.com/reference/kotlin/androidx/annotation/RequiresApi.html"><span class="token annotation builtin">RequiresApi</span></a><span class="token punctuation">(</span><span>api<span class="token operator"> = </span><a href="https://developer.android.com/reference/kotlin/android/os/Build.VERSION_CODES.html">Build.VERSION_CODES.HONEYCOMB</a></span><wbr></wbr><span class="token punctuation">)</span></div></div><span class="token keyword">open </span><span class="token keyword">fun </span><a href="start.html"><span class="token function">start</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span><span class="token annotation builtin">@</span><a href="https://developer.android.com/reference/kotlin/androidx/annotation/NonNull.html"><span class="token annotation builtin">NonNull</span></a> </span>context<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/content/Context.html">Context</a><span class="token punctuation">, </span></span><span class="parameter "><span><span class="token annotation builtin">@</span><a href="https://developer.android.com/reference/kotlin/androidx/annotation/NonNull.html"><span class="token annotation builtin">NonNull</span></a> </span>fragment<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/app/Fragment.html">Fragment</a></span></span><span class="token punctuation">)</span></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="start.html"><span class="token function">start</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span><span class="token annotation builtin">@</span><a href="https://developer.android.com/reference/kotlin/androidx/annotation/NonNull.html"><span class="token annotation builtin">NonNull</span></a> </span>context<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/content/Context.html">Context</a><span class="token punctuation">, </span></span><span class="parameter "><span><span class="token annotation builtin">@</span><a href="https://developer.android.com/reference/kotlin/androidx/annotation/NonNull.html"><span class="token annotation builtin">NonNull</span></a> </span>fragment<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/fragment/app/Fragment.html">Fragment</a></span></span><span class="token punctuation">)</span></div><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://developer.android.com/reference/kotlin/androidx/annotation/RequiresApi.html"><span class="token annotation builtin">RequiresApi</span></a><span class="token punctuation">(</span><span>api<span class="token operator"> = </span><a href="https://developer.android.com/reference/kotlin/android/os/Build.VERSION_CODES.html">Build.VERSION_CODES.HONEYCOMB</a></span><wbr></wbr><span class="token punctuation">)</span></div></div><span class="token keyword">open </span><span class="token keyword">fun </span><a href="start.html"><span class="token function">start</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span><span class="token annotation builtin">@</span><a href="https://developer.android.com/reference/kotlin/androidx/annotation/NonNull.html"><span class="token annotation builtin">NonNull</span></a> </span>context<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/content/Context.html">Context</a><span class="token punctuation">, </span></span><span class="parameter "><span><span class="token annotation builtin">@</span><a href="https://developer.android.com/reference/kotlin/androidx/annotation/NonNull.html"><span class="token annotation builtin">NonNull</span></a> </span>fragment<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/app/Fragment.html">Fragment</a><span class="token punctuation">, </span></span><span class="parameter "><span><span class="token annotation builtin">@</span><a href="https://developer.android.com/reference/kotlin/androidx/annotation/Nullable.html"><span class="token annotation builtin">Nullable</span></a> </span>cls<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/java/lang/Class.html">Class</a><span class="token operator">&lt;</span><span class="token keyword">out </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-any/index.html">Any</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="start.html"><span class="token function">start</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span><span class="token annotation builtin">@</span><a href="https://developer.android.com/reference/kotlin/androidx/annotation/NonNull.html"><span class="token annotation builtin">NonNull</span></a> </span>context<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/content/Context.html">Context</a><span class="token punctuation">, </span></span><span class="parameter "><span><span class="token annotation builtin">@</span><a href="https://developer.android.com/reference/kotlin/androidx/annotation/NonNull.html"><span class="token annotation builtin">NonNull</span></a> </span>fragment<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/fragment/app/Fragment.html">Fragment</a><span class="token punctuation">, </span></span><span class="parameter "><span><span class="token annotation builtin">@</span><a href="https://developer.android.com/reference/kotlin/androidx/annotation/Nullable.html"><span class="token annotation builtin">Nullable</span></a> </span>cls<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/java/lang/Class.html">Class</a><span class="token operator">&lt;</span><span class="token keyword">out </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-any/index.html">Any</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span></div><div class="brief ">Start <a href="../../-crop-image-activity/index.html">CropImageActivity</a>.</div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="start.html"><span class="token function">start</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span><span class="token annotation builtin">@</span><a href="https://developer.android.com/reference/kotlin/androidx/annotation/NonNull.html"><span class="token annotation builtin">NonNull</span></a> </span>activity<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/app/Activity.html">Activity</a><span class="token punctuation">, </span></span><span class="parameter ">requestCode<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      <div class="footer">
+        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2026 Copyright</span><span
+                class="pull-right"><span>Generated by </span><a
+                href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+      </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

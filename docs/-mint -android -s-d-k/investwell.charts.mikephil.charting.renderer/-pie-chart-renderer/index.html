@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>PieChartRenderer</title>
+    <link href="../../../images/logo-icon.svg" rel="icon" type="image/svg">
+    <script>var pathToRoot = "../../../";</script>
+    <script>document.documentElement.classList.replace("no-js","js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async="async"></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../styles/font-jb-sans-auto.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/clipboard.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer="defer"></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/symbol-parameters-wrapper_deferred.js" defer="defer"></script>
+</head>
+<body>
+    <div class="root">
+<nav class="navigation" id="navigation-wrapper">
+    <div class="navigation--inner">
+        <div class="navigation-title">
+            <button class="menu-toggle" id="menu-toggle" type="button">toggle menu</button>
+            <div class="library-name">
+                    <a class="library-name--link" href="../../../index.html">
+                            Mint Android SDK
+                    </a>
+            </div>
+            <div class="library-version">
+            </div>
+        </div>
+        <div class="filter-section" id="filter-section">
+                <button class="platform-tag platform-selector jvm-like" data-active="" data-filter=":mint:dokkaHtml/release">androidJvm</button>
+        </div>
+    </div>
+    <div class="navigation-controls">
+        <button class="navigation-controls--btn navigation-controls--theme" id="theme-toggle-button" type="button">switch theme</button>
+        <div class="navigation-controls--btn navigation-controls--search" id="searchBar" role="button">search in API</div>
+    </div>
+</nav>
+        <div id="container">
+            <div class="sidebar" id="leftColumn">
+                <div class="sidebar--inner" id="sideMenu"></div>
+            </div>
+            <div id="main">
+<div class="main-content" data-page-type="classlike" id="content" pageIds="Mint Android SDK::investwell.charts.mikephil.charting.renderer/PieChartRenderer///PointingToDeclaration//-34834412">
+  <div class="breadcrumbs"><a href="../../../index.html">Mint Android SDK</a><span class="delimiter">/</span><a href="../index.html">investwell.charts.mikephil.charting.renderer</a><span class="delimiter">/</span><span class="current">PieChartRenderer</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span>Pie</span><wbr></wbr><span>Chart</span><wbr></wbr><span><span>Renderer</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":mint:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="index.html">PieChartRenderer</a> : <a href="../-data-renderer/index.html">DataRenderer</a></div></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="CONSTRUCTOR">
+        <h2 class="">Constructors</h2>
+        <div class="table"><a data-name="1984122189%2FConstructors%2F-34834412" anchor-label="PieChartRenderer" id="1984122189%2FConstructors%2F-34834412" data-filterable-set=":mint:dokkaHtml/release"></a>
+          <div class="table-row" data-togglable="CONSTRUCTOR" data-filterable-current=":mint:dokkaHtml/release" data-filterable-set=":mint:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-pie-chart-renderer.html"><span>Pie</span><wbr></wbr><span>Chart</span><wbr></wbr><span><span>Renderer</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1984122189%2FConstructors%2F-34834412"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":mint:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">chart<span class="token operator">: </span><a href="../../investwell.charts.mikephil.charting.charts/-pie-chart/index.html">PieChart</a><span class="token punctuation">, </span></span><span class="parameter ">animator<span class="token operator">: </span><a href="../../investwell.charts.mikephil.charting.animation/-chart-animator/index.html">ChartAnimator</a><span class="token punctuation">, </span></span><span class="parameter ">viewPortHandler<span class="token operator">: </span><a href="../../investwell.charts.mikephil.charting.utils/-view-port-handler/index.html">ViewPortHandler</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="FUNCTION">
+        <h2 class="">Functions</h2>
+        <div class="table"><a data-name="-1448242464%2FFunctions%2F-34834412" anchor-label="drawData" id="-1448242464%2FFunctions%2F-34834412" data-filterable-set=":mint:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":mint:dokkaHtml/release" data-filterable-set=":mint:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="draw-data.html"><span>draw</span><wbr></wbr><span><span>Data</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1448242464%2FFunctions%2F-34834412"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":mint:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="draw-data.html"><span class="token function">drawData</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">c<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/graphics/Canvas.html">Canvas</a></span></span><span class="token punctuation">)</span></div><div class="brief ">Draws the actual data in form of lines, bars, ...</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-21894055%2FFunctions%2F-34834412" anchor-label="drawExtras" id="-21894055%2FFunctions%2F-34834412" data-filterable-set=":mint:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":mint:dokkaHtml/release" data-filterable-set=":mint:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="draw-extras.html"><span>draw</span><wbr></wbr><span><span>Extras</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-21894055%2FFunctions%2F-34834412"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":mint:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="draw-extras.html"><span class="token function">drawExtras</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">c<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/graphics/Canvas.html">Canvas</a></span></span><span class="token punctuation">)</span></div><div class="brief ">Draws any kind of additional information (e.g.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-309235759%2FFunctions%2F-34834412" anchor-label="drawHighlighted" id="-309235759%2FFunctions%2F-34834412" data-filterable-set=":mint:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":mint:dokkaHtml/release" data-filterable-set=":mint:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="draw-highlighted.html"><span>draw</span><wbr></wbr><span><span>Highlighted</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-309235759%2FFunctions%2F-34834412"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":mint:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="draw-highlighted.html"><span class="token function">drawHighlighted</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">c<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/graphics/Canvas.html">Canvas</a><span class="token punctuation">, </span></span><span class="parameter ">indices<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-array/index.html">Array</a><span class="token operator">&lt;</span><a href="../../investwell.charts.mikephil.charting.highlight/-highlight/index.html">Highlight</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span></div><div class="brief ">Draws all highlight indicators for the values that are currently highlighted.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1748005839%2FFunctions%2F-34834412" anchor-label="drawValue" id="1748005839%2FFunctions%2F-34834412" data-filterable-set=":mint:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":mint:dokkaHtml/release" data-filterable-set=":mint:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="draw-value.html"><span>draw</span><wbr></wbr><span><span>Value</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1748005839%2FFunctions%2F-34834412"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":mint:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="draw-value.html"><span class="token function">drawValue</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">c<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/graphics/Canvas.html">Canvas</a><span class="token punctuation">, </span></span><span class="parameter ">valueText<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/java/lang/String.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">x<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-float/index.html">Float</a><span class="token punctuation">, </span></span><span class="parameter ">y<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-float/index.html">Float</a><span class="token punctuation">, </span></span><span class="parameter ">color<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span></div><div class="brief ">Draws the value of the given entry by using the provided IValueFormatter.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="750944536%2FFunctions%2F-34834412" anchor-label="drawValues" id="750944536%2FFunctions%2F-34834412" data-filterable-set=":mint:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":mint:dokkaHtml/release" data-filterable-set=":mint:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="draw-values.html"><span>draw</span><wbr></wbr><span><span>Values</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="750944536%2FFunctions%2F-34834412"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":mint:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="draw-values.html"><span class="token function">drawValues</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">c<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/graphics/Canvas.html">Canvas</a></span></span><span class="token punctuation">)</span></div><div class="brief ">Loops over all Entrys and draws their values.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="755163978%2FFunctions%2F-34834412" anchor-label="getPaintCenterText" id="755163978%2FFunctions%2F-34834412" data-filterable-set=":mint:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":mint:dokkaHtml/release" data-filterable-set=":mint:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-paint-center-text.html"><span>get</span><wbr></wbr><span>Paint</span><wbr></wbr><span>Center</span><wbr></wbr><span><span>Text</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="755163978%2FFunctions%2F-34834412"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":mint:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="get-paint-center-text.html"><span class="token function">getPaintCenterText</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/text/TextPaint.html">TextPaint</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="903952189%2FFunctions%2F-34834412" anchor-label="getPaintEntryLabels" id="903952189%2FFunctions%2F-34834412" data-filterable-set=":mint:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":mint:dokkaHtml/release" data-filterable-set=":mint:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-paint-entry-labels.html"><span>get</span><wbr></wbr><span>Paint</span><wbr></wbr><span>Entry</span><wbr></wbr><span><span>Labels</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="903952189%2FFunctions%2F-34834412"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":mint:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="get-paint-entry-labels.html"><span class="token function">getPaintEntryLabels</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/graphics/Paint.html">Paint</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-333262398%2FFunctions%2F-34834412" anchor-label="getPaintHighlight" id="-333262398%2FFunctions%2F-34834412" data-filterable-set=":mint:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":mint:dokkaHtml/release" data-filterable-set=":mint:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-data-renderer/get-paint-highlight.html"><span>get</span><wbr></wbr><span>Paint</span><wbr></wbr><span><span>Highlight</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-333262398%2FFunctions%2F-34834412"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":mint:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="../-data-renderer/get-paint-highlight.html"><span class="token function">getPaintHighlight</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/graphics/Paint.html">Paint</a></div><div class="brief ">Returns the Paint object this renderer uses for drawing highlight indicators.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1084452524%2FFunctions%2F-34834412" anchor-label="getPaintHole" id="1084452524%2FFunctions%2F-34834412" data-filterable-set=":mint:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":mint:dokkaHtml/release" data-filterable-set=":mint:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-paint-hole.html"><span>get</span><wbr></wbr><span>Paint</span><wbr></wbr><span><span>Hole</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1084452524%2FFunctions%2F-34834412"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":mint:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="get-paint-hole.html"><span class="token function">getPaintHole</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/graphics/Paint.html">Paint</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1888222898%2FFunctions%2F-34834412" anchor-label="getPaintRender" id="-1888222898%2FFunctions%2F-34834412" data-filterable-set=":mint:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":mint:dokkaHtml/release" data-filterable-set=":mint:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-data-renderer/get-paint-render.html"><span>get</span><wbr></wbr><span>Paint</span><wbr></wbr><span><span>Render</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1888222898%2FFunctions%2F-34834412"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":mint:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="../-data-renderer/get-paint-render.html"><span class="token function">getPaintRender</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/graphics/Paint.html">Paint</a></div><div class="brief ">Returns the Paint object used for rendering.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1801081364%2FFunctions%2F-34834412" anchor-label="getPaintTransparentCircle" id="-1801081364%2FFunctions%2F-34834412" data-filterable-set=":mint:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":mint:dokkaHtml/release" data-filterable-set=":mint:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-paint-transparent-circle.html"><span>get</span><wbr></wbr><span>Paint</span><wbr></wbr><span>Transparent</span><wbr></wbr><span><span>Circle</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1801081364%2FFunctions%2F-34834412"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":mint:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="get-paint-transparent-circle.html"><span class="token function">getPaintTransparentCircle</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/graphics/Paint.html">Paint</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1921025214%2FFunctions%2F-34834412" anchor-label="getPaintValues" id="-1921025214%2FFunctions%2F-34834412" data-filterable-set=":mint:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":mint:dokkaHtml/release" data-filterable-set=":mint:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-data-renderer/get-paint-values.html"><span>get</span><wbr></wbr><span>Paint</span><wbr></wbr><span><span>Values</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1921025214%2FFunctions%2F-34834412"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":mint:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="../-data-renderer/get-paint-values.html"><span class="token function">getPaintValues</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/graphics/Paint.html">Paint</a></div><div class="brief ">Returns the Paint object this renderer uses for drawing the values (value-text).</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-286840893%2FFunctions%2F-34834412" anchor-label="initBuffers" id="-286840893%2FFunctions%2F-34834412" data-filterable-set=":mint:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":mint:dokkaHtml/release" data-filterable-set=":mint:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="init-buffers.html"><span>init</span><wbr></wbr><span><span>Buffers</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-286840893%2FFunctions%2F-34834412"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":mint:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="init-buffers.html"><span class="token function">initBuffers</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="brief ">Initializes the buffers used for rendering with a new size.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="597073360%2FFunctions%2F-34834412" anchor-label="releaseBitmap" id="597073360%2FFunctions%2F-34834412" data-filterable-set=":mint:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":mint:dokkaHtml/release" data-filterable-set=":mint:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="release-bitmap.html"><span>release</span><wbr></wbr><span><span>Bitmap</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="597073360%2FFunctions%2F-34834412"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":mint:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="release-bitmap.html"><span class="token function">releaseBitmap</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="brief ">Releases the drawing bitmap.</div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      <div class="footer">
+        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2026 Copyright</span><span
+                class="pull-right"><span>Generated by </span><a
+                href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+      </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

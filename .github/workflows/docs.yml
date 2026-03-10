@@ -3,7 +3,10 @@ name: Build Documentation
 on:
   push:
     branches:
-      - laxmi/aar2-1-7
+      - master
+
+permissions:
+  contents: write
 
 jobs:
   docs:
@@ -14,38 +17,45 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v3
 
+      # Setup Java
       - name: Setup Java
         uses: actions/setup-java@v3
         with:
           distribution: temurin
           java-version: 17
 
-      # Remove problematic property
+      # Setup Gradle
+      - name: Setup Gradle
+        uses: gradle/gradle-build-action@v2
+
+      # Fix invalid java path from gradle.properties
       - name: Fix gradle.properties
         run: |
           sed -i '/org.gradle.java.home/d' gradle.properties
 
-      # Setup modern Gradle
-      - name: Setup Gradle
-        uses: gradle/gradle-build-action@v2
+      # Generate Dokka documentation
+      - name: Generate Dokka Docs
+        run: ./gradlew dokkaHtml
 
-      - name: Generate Dokka API Docs
-        run: gradle dokkaHtml
-
+      # Copy Dokka output to docs/api
       - name: Copy API Docs
         run: |
+          rm -rf docs/api
           mkdir -p docs/api
-          cp -r build/dokka/html/* docs/api/
+          cp -r */build/dokka/* docs/api/ || true
 
+      # Setup Python
       - name: Setup Python
         uses: actions/setup-python@v4
         with:
           python-version: 3.x
 
+      # Install MkDocs
       - name: Install MkDocs
         run: |
           pip install mkdocs
           pip install mkdocs-material
 
-      - name: Deploy Documentation
+      # Deploy documentation
+      - name: Deploy Docs
         run: mkdocs gh-deploy --force
