@@ -1,0 +1,46 @@
+name: Build Documentation
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  docs:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Setup Java
+        uses: actions/setup-java@v3
+        with:
+          distribution: temurin
+          java-version: 17
+
+      - name: Install Gradle
+        run: |
+          sudo apt-get update
+          sudo apt-get install gradle -y
+
+      - name: Generate Dokka API Docs
+        run: gradle dokkaHtml
+
+      - name: Copy API Docs
+        run: |
+          mkdir -p docs/api
+          cp -r build/dokka/html/* docs/api/
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: 3.x
+
+      - name: Install MkDocs
+        run: |
+          pip install mkdocs
+          pip install mkdocs-material
+
+      - name: Deploy Documentation
+        run: mkdocs gh-deploy --force

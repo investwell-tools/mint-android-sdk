@@ -1,0 +1,22 @@
+site_name: Mint Android SDK
+site_description: Official documentation for Mint Android SDK
+site_url: https://investwell-tools.github.io/mint-android-sdk
+
+theme:
+  name: material
+
+nav:
+  - Home: index.md
+
+  - Getting Started:
+      - Installation: installation.md
+      - Quick Start: quickstart.md
+      - Configuration: configuration.md
+
+  - Features:
+      - Authentication: features/authentication.md
+      - Payments: features/payments.md
+      - Analytics: features/analytics.md
+
+  - API Reference: api/index.md
+  - Changelog: changelog.md
