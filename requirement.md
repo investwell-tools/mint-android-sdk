@@ -37,6 +37,11 @@ gradle/wrapper/gradle-wrapper.properties
 ## Run this in your project:
 ./gradlew publish
 
+or run 
+
+chmod +x gradlew
+./gradlew publish
+
 ## check after deployment success 
 
 implementation("com.github.investwell-tools:mint-sdk:2.1.7")
