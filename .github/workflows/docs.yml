@@ -1,9 +1,14 @@
+<<<<<<< HEAD
 name: Deploy Docs (GitHub Pages)
+=======
+name: Build Documentation
+>>>>>>> 86d693cd (doc generate feature added)
 
 on:
   push:
     branches:
       - main
+<<<<<<< HEAD
       - master
       - prerelease/**
   workflow_dispatch:
@@ -19,10 +24,16 @@ concurrency:
 
 jobs:
   build:
+=======
+
+jobs:
+  docs:
+>>>>>>> 86d693cd (doc generate feature added)
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout Repository
+<<<<<<< HEAD
         uses: actions/checkout@v4
 
       - name: Setup Python
@@ -68,3 +79,38 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+=======
+        uses: actions/checkout@v3
+
+      - name: Setup Java
+        uses: actions/setup-java@v3
+        with:
+          distribution: temurin
+          java-version: 17
+
+      - name: Install Gradle
+        run: |
+          sudo apt-get update
+          sudo apt-get install gradle -y
+
+      - name: Generate Dokka API Docs
+        run: gradle dokkaHtml
+
+      - name: Copy API Docs
+        run: |
+          mkdir -p docs/api
+          cp -r build/dokka/html/* docs/api/
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: 3.x
+
+      - name: Install MkDocs
+        run: |
+          pip install mkdocs
+          pip install mkdocs-material
+
+      - name: Deploy Documentation
+        run: mkdocs gh-deploy --force
+>>>>>>> 86d693cd (doc generate feature added)

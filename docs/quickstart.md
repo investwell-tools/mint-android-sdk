@@ -8,6 +8,7 @@ Kotlin:
 Mint.initialize(
     context = applicationContext,
     apiKey = "YOUR_API_KEY"
+<<<<<<< HEAD
 )
 ```
 
@@ -22,3 +23,6 @@ Mint.initialize(
 
 
 ---
+=======
+)
+>>>>>>> 86d693cd (doc generate feature added)

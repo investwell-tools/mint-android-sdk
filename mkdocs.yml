@@ -1,4 +1,5 @@
 site_name: Mint Android SDK
+<<<<<<< HEAD
 site_description: Investwell Mint Android SDK Documentation
 site_author: Laxmikant
 
@@ -52,3 +53,26 @@ nav:
       - 2.1.4: versions/214.md
       - 2.1.9: versions/219.md
       - Flutter Guide: versions/flutterguide.md
+=======
+site_description: Official documentation for Mint Android SDK
+site_url: https://investwell-tools.github.io/mint-android-sdk
+
+theme:
+  name: material
+
+nav:
+  - Home: index.md
+
+  - Getting Started:
+      - Installation: installation.md
+      - Quick Start: quickstart.md
+      - Configuration: configuration.md
+
+  - Features:
+      - Authentication: features/authentication.md
+      - Payments: features/payments.md
+      - Analytics: features/analytics.md
+
+  - API Reference: api/index.md
+  - Changelog: changelog.md
+>>>>>>> 86d693cd (doc generate feature added)

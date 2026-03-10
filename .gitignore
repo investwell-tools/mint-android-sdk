@@ -1,7 +1,10 @@
 *.iml
 .gradle
 /local.properties
+<<<<<<< HEAD
 /gradle.properties
+=======
+>>>>>>> 86d693cd (doc generate feature added)
 /.idea/caches
 /.idea/libraries
 /.idea/modules.xml
@@ -13,9 +16,13 @@
 /captures
 .externalNativeBuild
 .cxx
+<<<<<<< HEAD
 local.properties
 /caches
 site
 site/
 venv
 venv/
+=======
+local.properties
+>>>>>>> 86d693cd (doc generate feature added)
