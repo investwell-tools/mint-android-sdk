@@ -2,7 +2,7 @@ site_name: Mint Android SDK
 site_description: Investwell Mint Android SDK Documentation
 site_author: Laxmikant
 
-repo_url: https://github.com/your-repo/mint-android-sdk
+repo_url: https://github.com/investwell-tools/mint-android-sdk
 repo_name: mint-android-sdk
 
 docs_dir: docs
