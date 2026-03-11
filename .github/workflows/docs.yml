@@ -3,7 +3,7 @@ name: Deploy Docs (GitHub Pages)
 on:
   push:
     branches:
-      - laxmi/aar2-1-7
+      - master
   workflow_dispatch:
 
 permissions:
