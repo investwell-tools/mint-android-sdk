@@ -3,7 +3,6 @@
 
 Example:
 
-```markdown
 # Mint SDK Gradle Implementation
 
 The Investwell Android SDK is published on **Jitpack**.
