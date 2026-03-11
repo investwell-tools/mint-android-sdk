@@ -3,7 +3,7 @@ name: Deploy Docs
 on:
   push:
     branches:
-      - laxmi/aar2-1-7
+      - master
 
 jobs:
   docs:
