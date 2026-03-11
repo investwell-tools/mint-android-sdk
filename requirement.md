@@ -45,3 +45,6 @@ chmod +x gradlew
 ## check after deployment success 
 
 implementation("com.github.investwell-tools:mint-sdk:2.1.7")
+
+
+## before publishing docs need to build and generate site

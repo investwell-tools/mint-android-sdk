@@ -8,10 +8,6 @@ repo_name: mint-android-sdk
 docs_dir: docs
 site_dir: site
 
-exclude_docs: |
-  index.html
-
-
 theme:
   name: material
   features:
@@ -42,5 +38,5 @@ nav:
       - Quick Start: quickstart.md
 
   - Versions:
-      - 2.1.4: versions/2.1.4.md
       - 2.1.7: versions/2.1.7.md
+      - 2.1.4: versions/2.1.4.md
