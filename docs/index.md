@@ -191,6 +191,8 @@ if (!mintSDK.isAuthValidated()){
   mintSDK.clearSDKData();
 ```
 
+## Flutter Implementation
+[Flutter Guide](versions/flutterguide.md)
 
 ## Features
 
