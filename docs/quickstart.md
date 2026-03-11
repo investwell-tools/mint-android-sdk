@@ -47,4 +47,4 @@ You can later add:
 
 ---
 
-If you want, I can also create a **complete production-grade Android SDK documentation template (40+ pages)** like **Stripe / Firebase docs** specifically for your **Mint SDK**.
+
