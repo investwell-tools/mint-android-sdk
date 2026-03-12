@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 📧 Mint SDK Support
+    url: https://github.com/investwell-tools/mint-android-sdk/issues
+    about: Please open an issue here for support
