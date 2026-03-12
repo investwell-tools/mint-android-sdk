@@ -32,9 +32,9 @@ Example:
 > Add a listener interface like:
 
 ```java
-MintTransactionListener {
-   void onTransactionSuccess();
-   void onTransactionFailed();
+MintSDKListener {
+   void onSuccess();
+   void onFailed();
 }
 
 ```
