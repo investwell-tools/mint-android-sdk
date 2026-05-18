@@ -2,6 +2,29 @@ plugins {
     id 'maven-publish'
 }
 
+tasks.register("generateBomJson") {
+    group = "verification"
+    description = "Generate bom.json from libs/mint-2.1.8.aar (debuggable)"
+    doLast {
+        def aarPath = file("libs/mint-2.1.8.aar").absolutePath
+        def outPath = file("bom.json").absolutePath
+        def groupId = "com.github.investwell-tools"
+        def artifactId = "mint-sdk"
+        def ver = "2.1.8"
+
+        exec {
+            commandLine "python3",
+                    file("tools/generate_bom_from_aar.py").absolutePath,
+                    "--aar", aarPath,
+                    "--out", outPath,
+                    "--group", groupId,
+                    "--name", artifactId,
+                    "--version", ver,
+                    "--debug"
+        }
+    }
+}
+
 publishing {
 
     publications {
@@ -9,9 +32,9 @@ publishing {
         release(MavenPublication) {
             groupId = "com.github.investwell-tools"
             artifactId = "mint-sdk"
-            version = "2.1.7"
+            version = "2.1.8"
 
-            artifact("libs/mint-2.1.7.aar")
+            artifact("libs/mint-2.1.8.aar")
         }
     }
 

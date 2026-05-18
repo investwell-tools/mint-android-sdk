@@ -1,0 +1,103 @@
+{
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.4",
+  "serialNumber": "urn:uuid:08c34167-430c-4d61-8239-5692b1c199d9",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2026-03-19T10:25:44Z",
+    "tools": [
+      {
+        "vendor": "Mint",
+        "name": "generate_bom_from_aar.py",
+        "version": "1.0.0"
+      }
+    ],
+    "component": {
+      "type": "library",
+      "group": "com.github.investwell-tools",
+      "name": "mint-sdk",
+      "version": "2.1.7",
+      "purl": "pkg:maven/com.github.investwell-tools/mint-sdk@2.1.7?type=aar",
+      "bom-ref": "pkg:maven/com.github.investwell-tools/mint-sdk@2.1.7?type=aar"
+    }
+  },
+  "components": [
+    {
+      "type": "library",
+      "name": "classes",
+      "version": "unspecified",
+      "purl": "pkg:generic/classes@unspecified?type=jar",
+      "bom-ref": "pkg:generic/classes@unspecified?type=jar",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "84f1d69f4d9de4fc8b5c22ed48890153"
+        },
+        {
+          "alg": "SHA-1",
+          "content": "c015a99a92f4afa7bf32238865f6a943e2047685"
+        },
+        {
+          "alg": "SHA-256",
+          "content": "806269fa26e756e3cd4080a413ddbcd24206438fa8c32c7faf50034d6a9de703"
+        },
+        {
+          "alg": "SHA-384",
+          "content": "3c426ec0e0b1c299b188d7be8502f8a0ef4f8152a983d8f43e12499c2975ca0a6856559254a52e1aa59a029af3a9cd6f"
+        },
+        {
+          "alg": "SHA-512",
+          "content": "b83cb61048a9ec9d07e4c619b814a5fbdaed914b0ece153650d1811933f2de0556f04966d42c5b090ecf49e428ab8cb5e9c473f6b8b2e8790014f47f312d571d"
+        }
+      ],
+      "modified": false
+    },
+    {
+      "type": "library",
+      "name": "svg-android-1.0",
+      "version": "unspecified",
+      "purl": "pkg:generic/svg-android-1.0@unspecified?type=jar",
+      "bom-ref": "pkg:generic/svg-android-1.0@unspecified?type=jar",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "d72a830b6010009eefe9367b71d39afa"
+        },
+        {
+          "alg": "SHA-1",
+          "content": "300dbf1a34d77d49cc0fefa65835597ac3a46281"
+        },
+        {
+          "alg": "SHA-256",
+          "content": "59ee42ad5676ff3942ba1412e3c82ab49ef268b6f698dab33664d724b3fd98a7"
+        },
+        {
+          "alg": "SHA-384",
+          "content": "9e59b6f79c69aa88b1a5a38d27fa3dfd48c3d31f59e7a6a053f442bb5fbfb9cdabb99d1e8e97057d6a7a8212f8ec1309"
+        },
+        {
+          "alg": "SHA-512",
+          "content": "599bbde17d807752f66f68720f0734d18b5e922d5a059901a42e5f8d037c07296e9583c12416faa3727b3176ba66aa54afeff1dd655cab3812b304c7a6d120b8"
+        }
+      ],
+      "modified": false
+    }
+  ],
+  "dependencies": [
+    {
+      "ref": "pkg:maven/com.github.investwell-tools/mint-sdk@2.1.7?type=aar",
+      "dependsOn": [
+        "pkg:generic/classes@unspecified?type=jar",
+        "pkg:generic/svg-android-1.0@unspecified?type=jar"
+      ]
+    },
+    {
+      "ref": "pkg:generic/classes@unspecified?type=jar",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:generic/svg-android-1.0@unspecified?type=jar",
+      "dependsOn": []
+    }
+  ]
+}
