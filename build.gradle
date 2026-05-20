@@ -6,11 +6,11 @@ tasks.register("generateBomJson") {
     group = "verification"
     description = "Generate bom.json from libs/mint-2.1.8.aar (debuggable)"
     doLast {
-        def aarPath = file("libs/mint-2.1.8.aar").absolutePath
+        def aarPath = file("libs/mint-2.1.9.aar").absolutePath
         def outPath = file("bom.json").absolutePath
         def groupId = "com.github.investwell-tools"
-        def artifactId = "mint-sdk"
-        def ver = "2.1.8"
+        def artifactId = "mint-android-sdk"
+        def ver = "2.1.9"
 
         exec {
             commandLine "python3",
@@ -32,9 +32,9 @@ publishing {
         release(MavenPublication) {
             groupId = "com.github.investwell-tools"
             artifactId = "mint-sdk"
-            version = "2.1.8"
+            version = "2.1.9"
 
-            artifact("libs/mint-2.1.8.aar")
+            artifact("libs/mint-2.1.9.aar")
         }
     }
 
