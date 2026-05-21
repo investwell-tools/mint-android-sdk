@@ -1,0 +1,42 @@
+def sdkVersion = "2.1.9"
+def sdkArtifactFile = layout.projectDirectory.file("libs/mint-${sdkVersion}.aar").asFile
+
+publishing {
+
+    publications {
+
+        release(MavenPublication) {
+
+            groupId = "com.investwell.tools"
+            artifactId = "mint-sdk"
+            version = sdkVersion
+
+            artifact(sdkArtifactFile) {
+                extension = "aar"
+            }
+
+            pom {
+
+                name.set("mint-android-sdk")
+                description.set("Mint Android SDK")
+                packaging = "aar"
+            }
+        }
+    }
+
+    repositories {
+
+        maven {
+
+            name = "GitHubPackages"
+
+            url = uri("https://maven.pkg.github.com/investwell-tools/mint-android-sdk")
+
+            credentials {
+
+                username = "laxmikant86"
+                password = System.getenv("GITHUB_TOKEN")
+            }
+        }
+    }
+}

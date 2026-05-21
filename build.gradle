@@ -1,63 +1,83 @@
 plugins {
     id 'maven-publish'
 }
+apply from: 'publish.gradle'
+// def sdkVersion = "2.1.9"
+// def sdkArtifactFile = layout.projectDirectory.file("libs/mint-${sdkVersion}.aar").asFile
 
-tasks.register("generateBomJson") {
-    group = "verification"
-    description = "Generate bom.json from libs/mint-2.1.8.aar (debuggable)"
-    doLast {
-        def aarPath = file("libs/mint-2.1.9.aar").absolutePath
-        def outPath = file("bom.json").absolutePath
-        def groupId = "com.github.investwell-tools"
-        def artifactId = "mint-android-sdk"
-        def ver = "2.1.9"
+// tasks.register("generateBomJson") {
+//     group = "verification"
+//     description = "Generate bom.json from ${sdkArtifactFile.name} (debuggable)"
+//     inputs.file(sdkArtifactFile)
+//     outputs.file(layout.projectDirectory.file("bom.json"))
 
-        exec {
-            commandLine "python3",
-                    file("tools/generate_bom_from_aar.py").absolutePath,
-                    "--aar", aarPath,
-                    "--out", outPath,
-                    "--group", groupId,
-                    "--name", artifactId,
-                    "--version", ver,
-                    "--debug"
-        }
-    }
-}
+//     doLast {
+//         if (!sdkArtifactFile.isFile()) {
+//             throw new GradleException("AAR not found: ${sdkArtifactFile}")
+//         }
 
-publishing {
+//         def aarPath = sdkArtifactFile.absolutePath
+//         def outPath = file("bom.json").absolutePath
+//         def groupId = "com.investwell.tools"
+//         def artifactId = "mint-sdk"
 
-    publications {
+//         exec {
+//             commandLine "python3",
+//                     file("tools/generate_bom_from_aar.py").absolutePath,
+//                     "--aar", aarPath,
+//                     "--out", outPath,
+//                     "--group", groupId,
+//                     "--name", artifactId,
+//                     "--version", sdkVersion,
+//                     "--debug"
+//         }
+//     }
+// }
 
-        release(MavenPublication) {
-            // groupId = "com.github.investwell-tools"
-            groupId = "com.investwell.tools"
-            artifactId = "mint-sdk"
-            version = "2.1.9"
+// publishing {
 
-            // artifact("libs/mint-2.1.9.aar")
+//     publications {
 
-            artifact("libs/app-prodRelease-fat.aar") {
-                  extension = "aar"
-              }
+//         release(MavenPublication) {
+//             groupId = "com.investwell.tools"
+//             artifactId = "mint-sdk"
+//             version = sdkVersion
 
-              pom {
-                  name.set("mint-android-sdk")
-                  description.set("Mint Android SDK")
-                  packaging = "aar"
-              }
-        }
-    }
+//             artifact(sdkArtifactFile) {
+//                 extension = "aar"
+//             }
 
-    repositories {
-        maven {
-            name = "GitHubPackages"
-            url = uri("https://maven.pkg.github.com/investwell-tools/mint-android-sdk")
+//             pom {
+//                 name.set("mint-android-sdk")
+//                 description.set("Mint Android SDK")
+//                 packaging = "aar"
+//             }
+//         }
+//     }
 
-            credentials {
-                username = project.findProperty("gpr.user") ?: System.getenv("GITHUB_USER")
-                password = project.findProperty("gpr.key") ?: System.getenv("GITHUB_TOKEN")
-            }
-        }
-    }
-}
+//     repositories {
+//         maven {
+//             name = "GitHubPackages"
+//             url = uri("https://maven.pkg.github.com/investwell-tools/mint-android-sdk")
+
+//             credentials {
+//                 username = "laxmikant86"
+//                 password = System.getenv("GITHUB_TOKEN")
+//             }
+//         }
+//     }
+// }
+
+// tasks.withType(org.gradle.api.publish.maven.tasks.PublishToMavenRepository).configureEach {
+//     doFirst {
+//         if (!sdkArtifactFile.isFile()) {
+//             throw new GradleException("AAR not found: ${sdkArtifactFile}")
+//         }
+
+//         if (repository.name == "GitHubPackages") {
+//             if (!repository.credentials.username || !repository.credentials.password) {
+//                 throw new GradleException("GitHub Packages credentials are missing. Set gpr.user/gpr.key or GITHUB_USER/GITHUB_TOKEN.")
+//             }
+//         }
+//     }
+// }
