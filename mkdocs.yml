@@ -45,7 +45,7 @@ nav:
       - Payments: features/payments.md    
   - Versions:
       - 2.1.7: versions/217.md
-      - 2.1.8: versions/2.1.8.md
+      - 2.1.8: versions/218v.md
       - 2.1.4: versions/214.md
       - 2.1.9: versions/219.md
       - Flutter Guide: versions/flutterguide.md
