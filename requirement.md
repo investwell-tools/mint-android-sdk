@@ -49,10 +49,10 @@ implementation("com.github.investwell-tools:mint-sdk:2.1.7")
 
 ## before publishing docs need to build and generate site
 
-export GITHUB_TOKEN=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
+ ./gradlew publish
 
- GITHUB_USER=laxmikant86
- GITHUB_TOKEN=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
+deploy on production directly 
+./gradlew publishReleasePublicationToGitHubPackagesRepository
 
  ./gradlew publishReleasePublicationToMavenLocal
  
