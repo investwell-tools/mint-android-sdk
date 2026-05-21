@@ -5,11 +5,11 @@ Investwell offers native Android, iOS and Flutter software development kit (SDK)
 Version: 2.1.7 | Updated on 11th Mar, 2026
 The Investwell Android SDK is published on Jitpack so it is mandatory to install the Jitpack package:
 
-[2.1.8 (New)](versions/2.1.8.md)
+[2.1.8 (New)](versions/218.md)
 
-[2.1.7](versions/2.1.7.md)
+[2.1.7](versions/217.md)
 
-[2.1.4](versions/2.1.4.md)
+[2.1.4](versions/214.md)
 
 * Step 1. Add the JitPack repository to your build file. Add it in your root build.gradle at the end of repositories:
 
