@@ -48,3 +48,12 @@ implementation("com.github.investwell-tools:mint-sdk:2.1.7")
 
 
 ## before publishing docs need to build and generate site
+
+ ./gradlew publish
+
+deploy on production directly 
+./gradlew publishReleasePublicationToGitHubPackagesRepository
+
+ ./gradlew publishReleasePublicationToMavenLocal
+ 
+  ./gradlew publishReleasePublicationToGitHubPackagesRepository

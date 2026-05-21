@@ -22,8 +22,8 @@ This document provides step-by-step instructions to configure your Android proje
 
 ## Prerequisites
 - Android Studio with Gradle
-- GitHub account with access to `investwell-tools/mint-android-app` repository
-- GitHub Personal Access Token (PAT) with `read:packages` scope
+- GitHub account with access to `investwell-tools/mint-android-sdk` repository
+- GitHub Personal Access Token (PAT) with `read:packages` scope for consuming, or `write:packages` for publishing
 
 ## Step 1: Configure gradle.properties
 
@@ -31,8 +31,8 @@ Add the following lines to your project's root `gradle.properties` file:
 
 ```properties
 # GitHub Packages credentials for MINT SDK
-gpr.user=laxmikant86
-gpr.key=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
+gpr.user=YOUR_GITHUB_USERNAME
+gpr.key=YOUR_GITHUB_TOKEN
 
 ```
 > **⚠️ SECURITY**: Never commit `gradle.properties` with credentials to version control. Add it to `.gitignore`.
@@ -52,7 +52,7 @@ dependencyResolutionManagement {
         
         // MINT SDK - Investwell Tools GitHub Packages
         maven {
-            url = uri("https://maven.pkg.github.com/investwell-tools/mint-android-app")
+            url = uri("https://maven.pkg.github.com/investwell-tools/mint-android-sdk")
             credentials {
                 username = providers.gradleProperty("gpr.user").orNull
                 password = providers.gradleProperty("gpr.key").orNull
@@ -69,7 +69,7 @@ In your **module-level** `build.gradle.kts` (app module), add:
 ```kotlin
 dependencies {
     // MINT SDK (replace with actual version)
-    implementation("com.investwell.mint:mint-sdk:X.X.X")
+    implementation("com.investwell.tools:mint-sdk:X.X.X")
     
     // Other dependencies...
 }

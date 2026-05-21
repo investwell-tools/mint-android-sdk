@@ -31,13 +31,20 @@ markdown_extensions:
 
 nav:
   - Home: index.md
-
   - SDK Guide:
       - Overview: sdk-overview.md
       - Installation: installation.md
       - Quick Start: quickstart.md
-
+      - Configuration: configuration.md
+      - Changelog: changelog.md
+  - API:
+      - API Reference: api/index.md    
+  - Features:
+      - Analytics: features/analytics.md
+      - Authentication: features/authentication.md
+      - Payments: features/payments.md    
   - Versions:
       - 2.1.7: versions/2.1.7.md
       - 2.1.8: versions/2.1.8.md
       - 2.1.4: versions/2.1.4.md
+      - Flutter Guide: versions/flutterguide.md
