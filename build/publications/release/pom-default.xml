@@ -6,4 +6,6 @@
   <artifactId>mint-sdk</artifactId>
   <version>2.1.9</version>
   <packaging>aar</packaging>
+  <name>mint-android-sdk</name>
+  <description>Mint Android SDK</description>
 </project>

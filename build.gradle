@@ -30,11 +30,22 @@ publishing {
     publications {
 
         release(MavenPublication) {
-            groupId = "com.github.investwell-tools"
+            // groupId = "com.github.investwell-tools"
+            groupId = "com.investwell.tools"
             artifactId = "mint-sdk"
             version = "2.1.9"
 
-            artifact("libs/mint-2.1.9.aar")
+            // artifact("libs/mint-2.1.9.aar")
+
+            artifact("libs/app-prodRelease-fat.aar") {
+                  extension = "aar"
+              }
+
+              pom {
+                  name.set("mint-android-sdk")
+                  description.set("Mint Android SDK")
+                  packaging = "aar"
+              }
         }
     }
 
