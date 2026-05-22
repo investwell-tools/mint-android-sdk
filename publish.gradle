@@ -1,5 +1,9 @@
 def sdkVersion = "2.1.9"
 def sdkArtifactFile = layout.projectDirectory.file("libs/mint-${sdkVersion}.aar").asFile
+def githubPackagesUser = providers.gradleProperty("gpr.user")
+        .orElse(providers.environmentVariable("GITHUB_USER"))
+def githubPackagesToken = providers.gradleProperty("gpr.key")
+        .orElse(providers.environmentVariable("GITHUB_TOKEN"))
 
 publishing {
 
@@ -34,8 +38,22 @@ publishing {
 
             credentials {
 
-                username = "laxmikant86"
-                password = System.getenv("GITHUB_TOKEN")
+                username = githubPackagesUser.getOrElse("")
+                password = githubPackagesToken.getOrElse("")
+            }
+        }
+    }
+}
+
+tasks.withType(org.gradle.api.publish.maven.tasks.PublishToMavenRepository).configureEach {
+    doFirst {
+        if (!sdkArtifactFile.isFile()) {
+            throw new GradleException("AAR not found: ${sdkArtifactFile}")
+        }
+
+        if (repository.name == "GitHubPackages") {
+            if (!githubPackagesUser.orNull || !githubPackagesToken.orNull) {
+                throw new GradleException("GitHub Packages credentials are missing. Set gpr.user/gpr.key in local gradle.properties or set GITHUB_USER/GITHUB_TOKEN.")
             }
         }
     }
