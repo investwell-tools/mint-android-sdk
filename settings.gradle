@@ -9,8 +9,10 @@ dependencyResolutionManagement {
             url = uri("https://maven.pkg.github.com/investwell-tools/mint-android-sdk")
 
             credentials {
-                username = providers.gradleProperty("gpr.user").orNull
-                password = providers.gradleProperty("gpr.key").orNull
+                // username = providers.gradleProperty("gpr.user").orNull
+                username = System.getenv("ACTOR_USERNAME")
+                password = System.getenv("ACTOR_TOKEN")
+                // password = providers.gradleProperty("gpr.key").orNull
             }
         }
     }
