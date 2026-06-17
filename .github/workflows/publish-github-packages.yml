@@ -1,34 +1,33 @@
-name: Publish Android Library to GitHub Packages
+name: Deploy to GitHub Packages
 
 on:
   push:
-    branches:
-      - uat
+    tags:
+      - 'v*'  # Trigger on version tags like v1.0.0, v2.2.0
+  workflow_dispatch:  # Allow manual trigger from GitHub UI
 
 jobs:
-  publish:
+  deploy:
     runs-on: ubuntu-latest
-
-    permissions:
-      contents: read
-      packages: write
-
+    
     steps:
-      - name: Checkout
+      - name: Checkout code
         uses: actions/checkout@v4
 
       - name: Set up JDK 17
         uses: actions/setup-java@v4
         with:
-          distribution: temurin
           java-version: '17'
-          cache: gradle
+          distribution: 'temurin'
 
-      - name: Grant execute permission
+      - name: Grant execute permission for gradlew
         run: chmod +x gradlew
+
+      - name: Build with Gradle
+        run: ./gradlew build --no-daemon --console=plain
 
       - name: Publish to GitHub Packages
         env:
-          GITHUB_USER: ${{ github.actor }}
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: ./gradlew publishReleasePublicationToGitHubPackagesRepository
+          GPR_USER: ${{ github.actor }}
+          GPR_KEY: ${{ secrets.GITHUB_TOKEN }}
+        run: ./gradlew publishReleasePublicationToGitHubPackagesRepository --no-daemon --console=plain
