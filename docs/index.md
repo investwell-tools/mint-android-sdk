@@ -5,11 +5,44 @@ Investwell offers native Android, iOS and Flutter software development kit (SDK)
 Version: 2.1.7 | Updated on 11th Mar, 2026
 The Investwell Android SDK is published on Jitpack so it is mandatory to install the Jitpack package:
 
-[2.1.8 (New)](versions/218.md)
+[2.2.0 (New)](versions/220.md)
+[2.1.8](versions/2.1.8.md)
 
 [2.1.7](versions/217.md)
 
 [2.1.4](versions/214.md)
+
+* configure mint sdk in your project 
+
+## gradlew.properties
+``` 
+githubToken=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
+githubUser=laxmikant86
+
+```
+## settings.gradlew.kts
+
+```settings.gradlew.kts
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+        gradlePluginPortal()
+        maven(url = uri("https://jitpack.io"))
+        maven {
+            url = uri("https://maven.pkg.github.com/investwell-tools/mint-android-sdk")
+            credentials {
+                username = providers.gradleProperty("githubUser").get()
+                password = providers.gradleProperty("githubToken").get()
+            }
+        }
+
+    }
+}
+
+```
+
 
 * Step 1. Add the JitPack repository to your build file. Add it in your root build.gradle at the end of repositories:
 
@@ -27,7 +60,7 @@ maven { url 'https://www.jitpack.io' }
 
 ```Groovy
 
-implementation("com.github.investwell-tools:mint-android-sdk:2.1.7")
+implementation("com.github.investwell-tools:mint-android-sdk:*.*.+")
 
 ```
 
