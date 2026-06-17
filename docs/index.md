@@ -59,8 +59,7 @@ maven { url 'https://www.jitpack.io' }
 * Step 2. After adding jitpack dependency add the Investwell SDK dependency in the build.gradle of your app folder.
 
 ```Groovy
-
-implementation("com.github.investwell-tools:mint-android-sdk:*.*.+")
+  implementation("com.investwell.tools:mint-sdk:2.2.0")
 
 ```
 
