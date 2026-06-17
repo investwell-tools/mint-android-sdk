@@ -8,9 +8,9 @@ The Investwell Android SDK is published on Jitpack so it is mandatory to install
 [2.2.0 (New)](versions/220.md)
 [2.1.8](versions/2.1.8.md)
 
-[2.1.7](versions/2.1.7.md)
+[2.1.7](versions/217.md)
 
-[2.1.4](versions/2.1.4.md)
+[2.1.4](versions/214.md)
 
 * configure mint sdk in your project 
 
