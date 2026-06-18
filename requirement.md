@@ -49,6 +49,7 @@ implementation("com.github.investwell-tools:mint-sdk:2.1.7")
 
 ## before publishing docs need to build and generate site
 
+ git tag v2.2.0 && git push origin v2.2.0
 
 deploy on production directly 
 ./gradlew publishReleasePublicationToGitHubPackagesRepository
