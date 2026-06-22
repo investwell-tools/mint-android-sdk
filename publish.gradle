@@ -1,4 +1,4 @@
-def sdkVersion = "2.2.0aar"
+def sdkVersion = "2.2.1aar"
 def sdkArtifactFile = layout.projectDirectory.file("libs/mint-${sdkVersion}.aar").asFile
 
 def githubPackagesUser = System.getenv("GITHUB_ACTOR") 
