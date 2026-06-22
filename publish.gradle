@@ -1,7 +1,7 @@
 def sdkVersion = "2.2.0aar"
-def sdkArtifactFile = layout.projectDirectory.file("libs/mint-${sdkVersion}.aar").asFile
-def githubPackagesUser = System.getenv("GITHUB_USER") ?: project.findProperty("gpr.user") ?: ""
-def githubPackagesToken = System.getenv("GITHUB_TOKEN") ?: project.findProperty("gpr.key") ?: ""
+def sdkArtifactFile = layout.projectDirectory.file("    libs/mint-${sdkVersion}.aar").asFile
+def githubPackagesUser = System.getenv("ACTOR_USERNAME") ?: project.findProperty("gpr.user") ?: ""
+def githubPackagesToken = System.getenv("ACTOR_TOKEN") ?: project.findProperty("gpr.key") ?: ""
 
 
 publishing {
