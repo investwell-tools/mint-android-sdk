@@ -35,7 +35,7 @@ publishing {
 
             url = uri("https://maven.pkg.github.com/investwell-tools/mint-android-sdk")
 
-            credenti
+            credentials {
                 username = githubPackagesUser
                 password = githubPackagesToken
             }
