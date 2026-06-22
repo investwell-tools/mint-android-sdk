@@ -51,7 +51,7 @@ tasks.withType(org.gradle.api.publish.maven.tasks.PublishToMavenRepository).conf
         }
 
         if (repository.name == "GitHubPackages") {
-            if (!githubPackagesUser.orNull || !githubPackagesToken.orNull) {
+            if (githubPackagesUser.trim().isEmpty() || githubPackagesToken.trim().isEmpty()) {
                 throw new GradleException("GitHub Packages credentials are missing. Set gpr.user/gpr.key in local gradle.properties or set GITHUB_USER/GITHUB_TOKEN.")
             }
         }

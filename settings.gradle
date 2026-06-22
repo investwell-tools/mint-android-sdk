@@ -10,8 +10,8 @@ dependencyResolutionManagement {
 
             credentials {
                 // username = providers.gradleProperty("gpr.user").orNull
-                username = System.getenv("ACTOR_USERNAME")
-                password = System.getenv("ACTOR_TOKEN")
+                username = System.getenv("GITHUB_USER")
+                password = System.getenv("GITHUB_TOKEN")
                 // password = providers.gradleProperty("gpr.key").orNull
             }
         }
