@@ -3,7 +3,9 @@ name: Deploy Docs (GitHub Pages)
 on:
   push:
     branches:
+      - main
       - master
+      - prerelease/**
   workflow_dispatch:
 
 permissions:
@@ -26,11 +28,10 @@ jobs:
       - name: Setup Python
         uses: actions/setup-python@v5
         with:
-          python-version: "3.x"
+          python-version: "3.12"
 
       - name: Install Dependencies
-        run: |
-          pip install mkdocs mkdocs-material pymdown-extensions
+        run: python -m pip install -r requirements.txt
 
       - name: Build Documentation
         run: mkdocs build --strict
