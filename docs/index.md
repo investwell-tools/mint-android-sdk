@@ -2,17 +2,96 @@
 
 Investwell offers native Android, iOS and Flutter software development kit (SDK) that facilitates seamless integration with any MFD partner platform application developed using these technologies. This SDK provides the complete features of Investwell Mint including Portfolio performance report, online transaction and scheme analytics. This enables a streamlined end-to-end experience.
 
-Version: 2.1.7 | Updated on 11th Mar, 2026
+Version: 7.6.10 | Updated on 24th Jun, 2026
 The Investwell Android SDK is published on Jitpack so it is mandatory to install the Jitpack package:
 
-[2.2.0 (New)](versions/220.md)
+## Intregation Guide
+* configure mint sdk in your project 
+
+## 1. Download the SDK repository
+
+Download the SDK repository from the shared Google Drive folder: [Mint SDK demo folder](https://drive.google.com/drive/folders/1D6WpQFNOicDjgVEjCZRkyDHf3pnZZ1sD?usp=sharing). Google Drive supports downloading files from a shared folder directly in the browser. 
+
+If the folder contains multiple files, download the complete repository package or the sample demo content from the same shared folder link. Google Drive allows selecting multiple files and downloading them together as a compressed archive.
+
+## 2. Add the repository to the parent app
+
+After downloading, place the SDK repository folder under the root directory of your parent Android app. For example, you can keep it alongside the app module or inside a local repository directory such as `repo/` or `build/repo/`.
+
+A common layout looks like this:
+
+```text
+ParentApp/
+├── app/
+├── repo/
+├── settings.gradle.kts
+└── build.gradle.kts
+```
+
+If your local Maven repository is inside the project, make sure the path matches the one used in Gradle, such as `../repo` or `../build/repo` depending on where you place it.
+
+## 3. Configure `settings.gradle.kts`
+
+Add the required repositories in `settings.gradle.kts`. The `dependencyResolutionManagement` block is the correct place to centralize dependency repositories, and `FAIL_ON_PROJECT_REPOS` enforces that project-level repositories are not used. 
+
+```kotlin
+pluginManagement {
+    repositories {
+        mavenLocal()
+        google()
+        mavenCentral()
+        gradlePluginPortal()
+        maven(url = uri("https://jitpack.io"))
+        maven { url = uri("../build/repo") } // or ../repo
+        maven {
+            url = uri("https://maven.pkg.github.com/investwell-tools/mint-android-sdk")
+            credentials {
+                username = providers.gradleProperty("githubUser").get()
+                password = providers.gradleProperty("githubToken").get()
+            }
+        }
+    }
+}
+
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        mavenLocal()
+        maven { url = uri("../build/repo") } // or ../repo
+        google()
+        mavenCentral()
+        gradlePluginPortal()
+        maven(url = uri("https://jitpack.io"))
+        maven {
+            url = uri("https://maven.pkg.github.com/investwell-tools/mint-android-sdk")
+            credentials {
+                username = providers.gradleProperty("githubUser").get()
+                password = providers.gradleProperty("githubToken").get()
+            }
+        }
+    }
+}
+
+rootProject.name = "MintSample"
+include(":app")
+```
+
+## 4. Add the dependency
+
+In your app-level `build.gradle.kts`, add the Mint SDK dependency:
+
+```kotlin
+dependencies {
+    implementation("com.investwell.tools:mint-sdk:7.6.10")
+}
+```
+[7.6.10 (New)](versions/7610.md)
+[2.2.0](versions/220.md)
 [2.1.8](versions/218.md)
 
 [2.1.7](versions/217.md)
 
 [2.1.4](versions/214.md)
-
-* configure mint sdk in your project 
 
 ## gradlew.properties
 ``` 
