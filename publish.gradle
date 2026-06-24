@@ -1,4 +1,4 @@
-def sdkVersion = "2.2.1aar"
+def sdkVersion = "2.2.1"
 def sdkArtifactFile = layout.projectDirectory.file("libs/mint-${sdkVersion}.aar").asFile
 
 def githubPackagesUser = System.getenv("GITHUB_ACTOR") 
@@ -41,80 +41,80 @@ publishing {
                         node.appendNode("scope", scope)
                     }
 
-                    // Room
-                    addDep("androidx.room", "room-runtime", "2.6.1", "compile")
-                    addDep("androidx.room", "room-ktx",     "2.6.1", "compile")
+                    // // Room
+                    // addDep("androidx.room", "room-runtime", "2.6.1", "compile")
+                    // addDep("androidx.room", "room-ktx",     "2.6.1", "compile")
 
-                    // Timber
-                    addDep("com.jakewharton.timber", "timber", "5.0.1", "compile")
+                    // // Timber
+                    // addDep("com.jakewharton.timber", "timber", "5.0.1", "compile")
 
-                    // Picasso
-                    addDep("com.squareup.picasso", "picasso", "2.8", "compile")
+                    // // Picasso
+                    // addDep("com.squareup.picasso", "picasso", "2.8", "compile")
 
-                    // SQLite
-                    addDep("androidx.sqlite", "sqlite", "2.4.0", "compile")
+                    // // SQLite
+                    // addDep("androidx.sqlite", "sqlite", "2.4.0", "compile")
 
-                    // OkHttp
-                    addDep("com.squareup.okhttp3", "okhttp", "4.12.0", "compile")
-                    addDep("com.squareup.okhttp3", "logging-interceptor", "4.12.0", "compile")
+                    // // OkHttp
+                    // addDep("com.squareup.okhttp3", "okhttp", "4.12.0", "compile")
+                    // addDep("com.squareup.okhttp3", "logging-interceptor", "4.12.0", "compile")
 
-                    // Retrofit
-                    addDep("com.squareup.retrofit2", "retrofit",       "2.9.0", "compile")
-                    addDep("com.squareup.retrofit2", "converter-gson", "2.9.0", "compile")
+                    // // Retrofit
+                    // addDep("com.squareup.retrofit2", "retrofit",       "2.9.0", "compile")
+                    // addDep("com.squareup.retrofit2", "converter-gson", "2.9.0", "compile")
 
-                    // Gson
-                    addDep("com.google.code.gson", "gson", "2.10.1", "compile")
+                    // // Gson
+                    // addDep("com.google.code.gson", "gson", "2.10.1", "compile")
 
-                    // Coroutines
-                    addDep("org.jetbrains.kotlinx", "kotlinx-coroutines-android", "1.7.3", "compile")
+                    // // Coroutines
+                    // addDep("org.jetbrains.kotlinx", "kotlinx-coroutines-android", "1.7.3", "compile")
 
-                    // WorkManager
-                    addDep("androidx.work", "work-runtime-ktx", "2.9.0", "compile")
+                    // // WorkManager
+                    // addDep("androidx.work", "work-runtime-ktx", "2.9.0", "compile")
 
-                    // Ktor
-                    addDep("io.ktor", "ktor-client-core",                 "2.3.7", "compile")
-                    addDep("io.ktor", "ktor-client-okhttp",               "2.3.7", "compile")
-                    addDep("io.ktor", "ktor-client-content-negotiation",  "2.3.7", "compile")
-                    addDep("io.ktor", "ktor-serialization-kotlinx-json",  "2.3.7", "compile")
-                    addDep("io.ktor", "ktor-client-logging",              "2.3.7", "compile")
+                    // // Ktor
+                    // addDep("io.ktor", "ktor-client-core",                 "2.3.7", "compile")
+                    // addDep("io.ktor", "ktor-client-okhttp",               "2.3.7", "compile")
+                    // addDep("io.ktor", "ktor-client-content-negotiation",  "2.3.7", "compile")
+                    // addDep("io.ktor", "ktor-serialization-kotlinx-json",  "2.3.7", "compile")
+                    // addDep("io.ktor", "ktor-client-logging",              "2.3.7", "compile")
 
-                    // Kotlinx Serialization
-                    addDep("org.jetbrains.kotlinx", "kotlinx-serialization-json", "1.6.3", "compile")
+                    // // Kotlinx Serialization
+                    // addDep("org.jetbrains.kotlinx", "kotlinx-serialization-json", "1.6.3", "compile")
 
-                    // Lottie
-                    addDep("com.airbnb.android", "lottie", "6.3.0", "compile")
+                    // // Lottie
+                    // addDep("com.airbnb.android", "lottie", "6.3.0", "compile")
 
-                    // Shimmer
-                    addDep("com.facebook.shimmer", "shimmer", "0.5.0", "compile")
+                    // // Shimmer
+                    // addDep("com.facebook.shimmer", "shimmer", "0.5.0", "compile")
 
-                    // Security Crypto
-                    addDep("androidx.security", "security-crypto", "1.1.0-alpha06", "compile")
+                    // // Security Crypto
+                    // addDep("androidx.security", "security-crypto", "1.1.0-alpha06", "compile")
 
-                    // RootBeer
-                    addDep("com.scottyab", "rootbeer-lib", "0.1.0", "compile")
+                    // // RootBeer
+                    // addDep("com.scottyab", "rootbeer-lib", "0.1.0", "compile")
 
-                    // Firebase Messaging
-                    addDep("com.google.firebase", "firebase-messaging", "23.4.1", "compile")
+                    // // Firebase Messaging
+                    // addDep("com.google.firebase", "firebase-messaging", "23.4.1", "compile")
 
-                    // Play Services Auth
-                    addDep("com.google.android.gms", "play-services-auth", "21.0.0", "compile")
+                    // // Play Services Auth
+                    // addDep("com.google.android.gms", "play-services-auth", "21.0.0", "compile")
 
-                    // AndroidX
-                    addDep("androidx.appcompat",       "appcompat",        "1.6.1",  "compile")
-                    addDep("androidx.constraintlayout","constraintlayout", "2.1.4",  "compile")
-                    addDep("androidx.viewpager2",      "viewpager2",       "1.0.0",  "compile")
-                    addDep("androidx.fragment",        "fragment-ktx",     "1.6.2",  "compile")
-                    addDep("androidx.multidex",        "multidex",         "2.0.1",  "compile")
-                    addDep("com.google.android.material", "material",      "1.11.0", "compile")
+                    // // AndroidX
+                    // addDep("androidx.appcompat",       "appcompat",        "1.6.1",  "compile")
+                    // addDep("androidx.constraintlayout","constraintlayout", "2.1.4",  "compile")
+                    // addDep("androidx.viewpager2",      "viewpager2",       "1.0.0",  "compile")
+                    // addDep("androidx.fragment",        "fragment-ktx",     "1.6.2",  "compile")
+                    // addDep("androidx.multidex",        "multidex",         "2.0.1",  "compile")
+                    // addDep("com.google.android.material", "material",      "1.11.0", "compile")
 
-                    // Volley
-                    addDep("com.android.volley", "volley", "1.2.1", "compile")
+                    // // Volley
+                    // addDep("com.android.volley", "volley", "1.2.1", "compile")
 
-                    // Compose BOM — individual artifacts the parent needs
-                    addDep("androidx.compose.ui",         "ui",          "1.6.4", "compile")
-                    addDep("androidx.compose.material3",  "material3",   "1.2.1", "compile")
-                    addDep("androidx.compose.ui",         "ui-tooling",  "1.6.4", "compile")
-                    addDep("androidx.lifecycle",          "lifecycle-runtime-ktx", "2.7.0", "compile")
+                    // // Compose BOM — individual artifacts the parent needs
+                    // addDep("androidx.compose.ui",         "ui",          "1.6.4", "compile")
+                    // addDep("androidx.compose.material3",  "material3",   "1.2.1", "compile")
+                    // addDep("androidx.compose.ui",         "ui-tooling",  "1.6.4", "compile")
+                    // addDep("androidx.lifecycle",          "lifecycle-runtime-ktx", "2.7.0", "compile")
                 }
             }
         }
