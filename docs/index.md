@@ -85,13 +85,6 @@ dependencies {
     implementation("com.investwell.tools:mint-sdk:7.6.10")
 }
 ```
-[7.6.10 (New)](versions/7610.md)
-[2.2.0](versions/220.md)
-[2.1.8](versions/218.md)
-
-[2.1.7](versions/217.md)
-
-[2.1.4](versions/214.md)
 
 ## gradlew.properties
 ``` 

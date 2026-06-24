@@ -22,29 +22,3 @@ Mint.initialize(
 
 
 ---
-
-# Features Your Docs Will Have
-
-✔ Automatic API documentation  
-✔ Kotlin + Java code examples  
-✔ Version ready structure  
-✔ Sidebar navigation  
-✔ Search  
-✔ Mobile friendly UI  
-✔ Topic-based documentation  
-
----
-
-# Optional (Recommended for SDKs)
-
-You can later add:
-
-- **versioned documentation**
-- **SDK architecture pages**
-- **integration guides**
-- **error handling docs**
-- **sample apps**
-
----
-
-
