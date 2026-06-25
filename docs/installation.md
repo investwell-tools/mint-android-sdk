@@ -26,6 +26,13 @@ repositories {
     maven { url 'https://jitpack.io' }
 }
 ```
+use for local maven repo Mint [download from release](https://github.com/investwell-tools/mint-android-sdk/releases)
+```
+maven {
+            url = uri("${rootProject.projectDir}/repo")
+        }
+
+```
 
 ## Step 2: Add the dependency
 
