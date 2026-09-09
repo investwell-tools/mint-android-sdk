@@ -45,6 +45,7 @@ nav:
       - Payments: features/payments.md    
   - Versions:
       - 7.6.10: versions/7610.md
+      - 7.6.11: versions/7611.md
       - 2.2.0: versions/220.md
       - 2.1.7: versions/217.md
       - 2.1.8: versions/218.md
