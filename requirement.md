@@ -21,7 +21,6 @@ or
 Maven Central
 
 
-
 ## Then give permission:
 chmod +x gradlew
  then run 
