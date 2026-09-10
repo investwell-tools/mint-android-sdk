@@ -1,6 +1,6 @@
 def sdkVersion = "7.6.11"
 def sdkArtifactFile = layout.projectDirectory.file("libs/mint-${sdkVersion}.aar").asFile
-def tagVersion = System.getenv("GITHUB_REF_NAME")?.removePrefix("v") ?: "0.0.1-SNAPSHOT"
+def tagVersion = System.getenv("GITHUB_REF_NAME")?.replaceFirst("^v", "") ?: "7.6.11"
 
 def githubPackagesUser = System.getenv("GITHUB_ACTOR") 
     ?: System.getenv("GPR_USER") 
