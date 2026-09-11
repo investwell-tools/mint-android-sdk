@@ -1,72 +1,27 @@
-<<<<<<< HEAD
 name: Deploy Docs (GitHub Pages)
-=======
-name: Build Documentation
->>>>>>> 86d693cd (doc generate feature added)
 
 on:
   push:
     branches:
       - main
 
+# These permissions are required for the modern GitHub Pages deployment
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
 jobs:
-  docs:
->>>>>>> 86d693cd (doc generate feature added)
+  build:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout Repository
-<<<<<<< HEAD
         uses: actions/checkout@v4
 
-      - name: Setup Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: "3.12"
-
-      - name: Install Dependencies
-        run: python -m pip install -r requirements.txt
-
-      - name: Resolve MkDocs Site Directory
-        id: mkdocs
-        run: |
-          python - <<'PY' >> "$GITHUB_OUTPUT"
-          from pathlib import Path
-          import yaml
-
-          config = yaml.safe_load(Path("mkdocs.yml").read_text()) or {}
-          site_dir = config.get("site_dir", "site")
-          print(f"site_dir={site_dir}")
-          PY
-
-      - name: Build Documentation
-        run: mkdocs build --strict
-
-      - name: Setup GitHub Pages
-        uses: actions/configure-pages@v5
-
-      - name: Upload Pages Artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: ${{ steps.mkdocs.outputs.site_dir }}
-
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
-=======
-        uses: actions/checkout@v3
-
+      # --- Steps from incoming branch (Dokka API Generation) ---
       - name: Setup Java
-        uses: actions/setup-java@v3
+        uses: actions/setup-java@v4
         with:
           distribution: temurin
           java-version: 17
@@ -84,16 +39,40 @@ jobs:
           mkdir -p docs/api
           cp -r build/dokka/html/* docs/api/
 
+      # --- Steps from HEAD (MkDocs Build & Artifact Upload) ---
       - name: Setup Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
-          python-version: 3.x
+          python-version: "3.12"
 
-      - name: Install MkDocs
+      - name: Install Dependencies
         run: |
-          pip install mkdocs
-          pip install mkdocs-material
+          if [ -f requirements.txt ]; then
+            python -m pip install -r requirements.txt
+          else
+            pip install mkdocs mkdocs-material
+          fi
 
-      - name: Deploy Documentation
-        run: mkdocs gh-deploy --force
->>>>>>> 86d693cd (doc generate feature added)
+      - name: Build Documentation
+        run: mkdocs build --strict
+
+      - name: Setup GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload Pages Artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
