@@ -1,25 +1,23 @@
-name: Deploy Docs (GitHub Pages)
+name: Build and Deploy Documentation
 
 on:
   push:
     branches:
       - main
 
-# These permissions are required for the modern GitHub Pages deployment
+# Required so GitHub Actions has permission to push the site to the gh-pages branch
 permissions:
-  contents: read
-  pages: write
-  id-token: write
+  contents: write
 
 jobs:
-  build:
+  build-and-deploy:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
 
-      # --- Steps from incoming branch (Dokka API Generation) ---
+      # --- 1. Java & Dokka Setup ---
       - name: Setup Java
         uses: actions/setup-java@v4
         with:
@@ -39,7 +37,7 @@ jobs:
           mkdir -p docs/api
           cp -r build/dokka/html/* docs/api/
 
-      # --- Steps from HEAD (MkDocs Build & Artifact Upload) ---
+      # --- 2. Python & MkDocs Setup ---
       - name: Setup Python
         uses: actions/setup-python@v5
         with:
@@ -53,26 +51,6 @@ jobs:
             pip install mkdocs mkdocs-material
           fi
 
-      - name: Build Documentation
-        run: mkdocs build --strict
-
-      - name: Setup GitHub Pages
-        uses: actions/configure-pages@v5
-
-      - name: Upload Pages Artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: site
-
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+      # --- 3. Build and Push to gh-pages branch ---
+      - name: Deploy Documentation
+        run: mkdocs gh-deploy --force
