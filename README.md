@@ -35,7 +35,6 @@ gpr.user=YOUR_GITHUB_USERNAME
 gpr.key=YOUR_GITHUB_TOKEN
 
 ```
-> **⚠️ SECURITY**: Never commit `gradle.properties` with credentials to version control. Add it to `.gitignore`.
 
 ```
 
